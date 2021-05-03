@@ -1,0 +1,55 @@
+- title: Getting Started
+  items:
+    - title: Overview
+      link: /
+    - title: Basics
+      link: /getting-started/basics/
+    - title: Installation
+      link: /getting-started/installation/
+    - title: Configuration
+      link: /getting-started/configuration/
+- title: Concepts
+  items:
+    - title: Campaigns
+      link: /concepts/campaigns/
+    - title: Transactional Emails
+      link: /concepts/transactionals/
+    - title: The Email Editor
+      link: /concepts/email-editor/
+    - title: Recipients
+      link: /concepts/recipients/
+    - title: Mailing Lists
+      link: /concepts/mailing-lists/
+    - title: Workspaces
+      link: /concepts/workspaces/
+    - title: Themes
+      link: /concepts/themes/
+- title: Develop
+  items:
+    - title: Overview
+      link: /develop/
+    - title: Tools
+      link: /develop/tools/
+    - title: Email Control
+      link: /develop/email-control/
+    - title: Email Service Providers
+      link: /develop/email-service-providers/
+    - title: Recipient List Providers
+      link: /develop/recipient-list-providers/
+    - title: Merge Field Providers
+      link: /develop/merge-field-providers/
+    - title: Events
+      link: /develop/events/
+    - title: Debugging / Issues
+      link: /develop/debugging-issues/
+- title: Other
+  items:
+    - title: Sending from the content section
+      link: /develop/sending-from-content-section/
+    - title: Front end API
+      link: /develop/tools/
+    - title: Signup form
+      link: /develop/tools/
+    - title: Signup form
+      link: /develop/tools/
+
