@@ -41,7 +41,7 @@
     - title: Events
       link: /develop/events/
     - title: Debugging / Issues
-      link: /develop/debugging-issues/
+      link: /develop/debugging/
 - title: Other
   items:
     - title: Sending from the content section
