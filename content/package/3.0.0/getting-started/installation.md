@@ -17,7 +17,7 @@ Install-Package NewsletterStudio
 We host several packages on NuGet:
 
 * NewsletterStudio - Contains only UI-file (App_Data)
-* NewsletterStudio.Web - Contains Umbraco-dependencies, lost of the time any custom class library you might have should dependencies on this package.
+* NewsletterStudio.Web - Contains Umbraco-dependencies, most of the time any custom class library you might have should depend on this package.
 * NewsletterStudio.Core - Core files for the package with minimum external dependencies. Reference this package when you want to extend the functionality.
 
 ## Install via the backoffice
