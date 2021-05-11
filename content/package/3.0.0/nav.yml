@@ -8,6 +8,8 @@
       link: /getting-started/installation/
     - title: Configuration
       link: /getting-started/configuration/
+    - title: Configure license
+      link: /getting-started/license/
 - title: Concepts
   items:
     - title: Campaigns
