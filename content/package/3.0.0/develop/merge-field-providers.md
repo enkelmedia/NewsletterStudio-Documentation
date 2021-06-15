@@ -9,10 +9,10 @@ Some of the built in merge fields are:
 * {{email}} - Replaced by the recipients email
 * {{name}} - Replaces by the recipients name
 
-Each "Custom Field" on a recipient is also represented as a merge field in the editor.
+Each "Custom Field" on a recipient can also be inserted as a merge field in the email editor.
 
 ## Extending Merge Fields
-It's possible to add merge fields to the editor, this is useful if you create a custom integration and would like to append more dynamic fields that the editor can choose from inteeed of having to remember the exact name, this is done using a "Merge Field Provider.
+It's possible to add custom merge fields to the email editor, this is useful if you create a custom integration and would like to append more dynamic fields that the editor can choose from so that they don't have to remember the exact name, this is done using a "Merge Field Provider.
 
 
 TODO:
