@@ -9,7 +9,7 @@ Some of the most common interactions with the Newsletter Studio-API is gathered 
 * Subscribe recipients to mailing lists
 * Unsubscribe recipients
 
-Just use the built in IOC-container to get an instance of the interface by injection this as a dependency on your controller or use the service locator.
+Just use the built in IOC-container to get an instance of the interface by injection this as a dependency in the constructor of your controller or use any of the service locators like `DependencyResolver.Current` for MVC.
 
 ## Adding a recipient programmatically
 The package ships with a simple macro to add a recipient to a list, you can find this in:
@@ -63,7 +63,7 @@ The AddRecipientRequest-class uses a fluent API to set data for the operation, h
 * **WithName()**: Expects a full name and tries to parse it into first/last name.
 * **WithFirstname()**: Sets the firstname
 * **WithLastname()**: Sets the lastname
-* **SubscribeTo()**: Subscribes the new recipient to a given Mailing List. (Tip: Use the Mailing List Picker property in the backoffice UI if this needs to be a setting).
-* **ForWorkspace()**: Sets the workspace for the new recipient. Only needed when the solution has multiple workspaces.
+* **SubscribeTo()**: Subscribes the new recipient to a given Mailing List. (Tip: Use the Mailing List Picker property editor in the backoffice UI if this needs to be a setting).
+* **ForWorkspace()**: Sets the Workspace for the new recipient. Only needed when the solution has multiple workspaces.
 * **WithCustomField()** Sets a custom field value for the recipient. Alias must match a configured field alias (Workspace settings)
 * **WithSource()** Sets the source property for the recipients. Used to track where recipients subscribe, could be "Start page signup form".
