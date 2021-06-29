@@ -42,16 +42,15 @@
       link: /develop/merge-field-providers/
     - title: Events
       link: /develop/events/
+    - title: Front end API
+      link: /develop/front-end-api/
     - title: Debugging / Issues
       link: /develop/debugging/
 - title: Other
   items:
     - title: Sending from the content section
       link: /develop/sending-from-content-section/
-    - title: Front end API
-      link: /develop/tools/
     - title: Signup form
       link: /develop/tools/
-    - title: Signup form
-      link: /develop/tools/
+
 
