@@ -9,7 +9,7 @@ Some of the most common interactions with the Newsletter Studio-API is gathered 
 * Subscribe recipients to mailing lists
 * Unsubscribe recipients
 
-Just use the built in IOC-container to get an instance of the interface by injection this as a dependency in the constructor of your controller or use any of the service locators like `DependencyResolver.Current` for MVC.
+Just use the built in IOC-container to get an instance of the interface by injecting it as a dependency in the constructor of your controller or use any of the service locators like `DependencyResolver.Current` for MVC.
 
 ## Adding a recipient programmatically
 The package ships with a simple macro to add a recipient to a list, you can find this in:
