@@ -7,7 +7,7 @@ The email editor supports merge fields, that is placeholders for dynamic content
 
 Some of the built in merge fields are:
 * {{email}} - Replaced by the recipients email
-* {{name}} - Replaces by the recipients name
+* {{name}} - Replaced by the recipients name
 
 Each "Custom Field" on a recipient can also be inserted as a merge field in the email editor.
 
