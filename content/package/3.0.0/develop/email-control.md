@@ -3,14 +3,14 @@ title: Email Control
 description: Documentation about Email Controls inside Newsletter Studio
 ---
 # Email Controls
-The actual content inside the email editor is always contained inside a "Email Control", examples of build in controls are:
+The actual content inside the email editor is always contained inside a "Email Control", some core controls are:
 
 * Image
 * Rich Text
 * Button
 
 ## Custom Email Control
-It's possible to create a custom "Email Control" to be used inside your implementation. 
+It's possible to create a custom Email Control to be used inside your implementation. 
 
 ## The Data Model
 
