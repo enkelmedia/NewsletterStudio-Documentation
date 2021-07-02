@@ -6,10 +6,10 @@
       link: /getting-started/basics/
     - title: Installation
       link: /getting-started/installation/
-    - title: Configuration
-      link: /getting-started/configuration/
     - title: Configure license
       link: /getting-started/license/
+    - title: Configuration
+      link: /getting-started/configuration/
 - title: Concepts
   items:
     - title: Campaigns
