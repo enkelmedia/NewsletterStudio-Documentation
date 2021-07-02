@@ -44,10 +44,3 @@ Each control has different settings but most of them has settings for
 It's possible to create custom controls, please follow our [guide of custom email controls](../develop/email-control.md) for more details.
 
 
-
-
-
-
-TODO:
-
-* [ ] Maybe move the "Steps" details about campaigns to the "Campaigns"-section?
