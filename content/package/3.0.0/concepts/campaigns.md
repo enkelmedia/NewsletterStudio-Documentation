@@ -16,7 +16,7 @@ The overview gives you a list of your campaigns with the most recent changed cam
 
 ## The designer
 
-To make the creation process intuitive the email editors consists of four steps. 
+To make the creation process intuitive the email editor consists of four steps. 
 
 ### 1. Information
 
