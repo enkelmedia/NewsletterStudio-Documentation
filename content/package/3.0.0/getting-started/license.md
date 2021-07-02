@@ -7,7 +7,7 @@ To use the full version of the package you need to purchase a license on this we
 
 
 ## Automatic installation
-Administrators can download and install the license via the backoffice. This will work both if you provided a Workspace-key during the checkout or if you want to associate the current website with you license.
+Administrators can download and install the license via the backoffice. This will work both if you provided a Workspace-key during the checkout or if you want to associate the current website with a license.
 
 
 
