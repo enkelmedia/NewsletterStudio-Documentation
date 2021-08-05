@@ -14,9 +14,9 @@ These controls are displayed in the toolbox on the right hand side inside the em
 ## Custom Email Control
 It's possible to create custom Email Control's and use them for both Campaigns and Transactional emails. Follow this guide to create your own control. Our example is a control that allows for custom HTML to be pasted into the email using a text-area but the possibilities is endless. 
 
-Start by creating a new folder inside the "App_Plugins"-folder of your project, let's call it `NewsletterStudioCustom` (or what ever you would like.)
+Start by creating a new folder inside the "App_Plugins"-folder of your project, let's call it `NewsletterStudioCustom` (or what ever you would like.) and inside this a folder called `CustomHtmlEmailControl`.
 
-Inside the folder create another folder called "Models" and add the CS-filers for the Data Model, View Model and Control Type to this folder.
+Inside the folder create another folder called `Models` and add the CS-filers for the Data Model, View Model and Control Type to this folder.
 
 ## The Data Model
 This model contains the data that your control must store, that could be raw HTML (as for the Rick Text-control) or image-urls, links etc. Each time the control is used inside a email this model will be used to serialize and store the data.
@@ -148,14 +148,14 @@ Note the alias, it's a combination of "control_" and the alias of the Email Cont
 
 Also, we need to create the html-views for the rendering and edit in the backoffice, create these two files as placeholders:
 
-/App_Plugins/NewsletterStudioCustom/CustomHtmlEmailControl/view.html
+`/App_Plugins/NewsletterStudioCustom/CustomHtmlEmailControl/view.html`
 ```html
 <div>
     Custom HTML Control, render view
 </div>
 ```
 
-/App_Plugins/NewsletterStudioCustom/CustomHtmlEmailControl/edit.html
+`/App_Plugins/NewsletterStudioCustom/CustomHtmlEmailControl/edit.html`
 ```html
 <div>
     Custom HTML Control, edit view
