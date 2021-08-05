@@ -157,7 +157,7 @@ Also, we need to create the html-views for the rendering and edit in the backoff
 </div>
 ```
 
-And finaly we need to render the cshtml-files for the control, there are several ways to create the cshtml-file to be rendered inside the email.
+And finally we need to render the cshtml-files for the control, there are several ways to create the cshtml-file to be rendered inside the email.
 
 **Quick and Dirty**
 
@@ -196,8 +196,8 @@ The new control icon should now appear in the toolbox in the backoffice. And you
 
 ![email-editor--with-toolbox](/media/guides/email-control/toolbox-with-control.png)
 
-## Creating the backoffice experiance
-The two html-files we just created is used to build the editor experiance in the backoffice. The "view.html"-file is what will be visually rendered in the email when editing and "edit.html" is will be rendered inside the toolbox on the right hand side when the control is selected.
+## Creating the backoffice experience
+The two html-files we just created is used to build the editor experience in the backoffice. The "view.html"-file is what will be visually rendered in the email when editing and "edit.html" is will be rendered inside the toolbox on the right hand side when the control is selected.
 
 To create some more functionality we need to work on these views so that we can input and render data. Let's start with adding a controller for the edit-view.
 
