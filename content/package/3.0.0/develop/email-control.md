@@ -195,7 +195,9 @@ Create the folder for the view:
 }
 ```
 
-**NOTE:** When the package move into stable release there will be a solution to this so that we can create a cshtml-file in a folder outside the package but that does not force the creation of a custom theme.
+**NOTE:** When the package move into stable release there will be a solution to this so that we can create a cshtml-file in a folder outside the package but that does not force the creation of a custom theme. From Beta7 onwards it's possible to create the a shared view without having to create a Theme.
+
+Add the following folder: `App_Plugins/NewsletterStudioExtensions/Views/Control`and put the `customhtml.cshtml` file in this folder. This will be used no matter what theme that is currently in use. To override the controls rendering for a given theme, see the instructions for how to work with [Themes](../concepts/themes.md).
 
 The new control icon should now appear in the toolbox in the backoffice. And you should be able to drag it into the content of the email.
 

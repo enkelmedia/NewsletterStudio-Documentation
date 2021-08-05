@@ -2,8 +2,8 @@
 
 Emails in Newsletter Studio is all based on a theme. The theme contains
 
-* HTML- templates (Razor) for the email and the controls.
 * Default settings for colors, font size and more.
+* HTML-templates (Razor) for rendering the email and controls.
 
 The default theme that is shipped with the package is based on best practices and provides a solid foundation for the rendering.
 
@@ -12,18 +12,40 @@ You can easily create your own themes to override the default behaviour. Themes 
 You should never make changes to the default theme as these changes might be overwritten when updating the package.
 
 ## How to create a Theme
-Themes lives inside the "App Plugins" folder, the default theme is located here:
+Themes lives inside the "App Plugins" folder, the default theme shipped with Newsletter STudio is located here:
 
 `App_Plugins/NewsletterStudio/Themes/Default/`
 
-To create a new theme you first need a folder inside App_Plugins, let's use "MySite" as an example, the folder can be named what ever suites your project. We need to create folders with the following structure:
+Avoid chaning these files directly as they might be overwritten during upgrades. To customize things create your own theme.
+
+To create a new theme you first need a folder inside App_Plugins, let's use "MySite" as an example and let's call the theme "MyTheme", the folder can be named what ever suites your project. We need to create folders with the following structure:
 
 `App_Plugins/MySite/NewsletterStudio/Themes/MyTheme`
 
-Inside "MyTheme" or what every you choose to call your folder we place files to override the settings in the default theme.
+We will look at each folder in "App_Plugins" and look for a sub folder called "NewsletterStudio". So basically a wildcard search like this:
 
+`App_Plguins/*/NewsletterStudio/Themes/*`
 
-### 
+Inside "MyTheme"-folder we need to create the file "theme.json" to declare our theme. Custom themes only override settings from the default theme so the minimun content of this file would be:
+
+```json
+{
+  "name": "My New Theme"
+}
+```
+
+A more useful version would be something like this to override the selectable colors:
+
+```json
+{
+  "name": "My New Theme",
+  "selectableColors": "#ff00ff,#0000ff,#ffff00",
+}
+```
+
+All other properties would be fetched from the theme.json file in for the default theme `App_Plugins/NewsletterStudio/Themes/Default/theme.json`
+
+It looks something like this:
 
 ```json
 {
@@ -61,12 +83,42 @@ Inside "MyTheme" or what every you choose to call your folder we place files to 
 }
 ```
 
+## Overriding rendering views (cshtml)
+There are two ways to override the rendering of the email. If you look into `App_Plugins/NewsletterStudio/Themes/Default/Views` you should see all views that are invloved in the rendering.
 
-Inside this folder you can place a themes.json file to override default settings.
+It's possible to override:
+* The main "email.csthml" file which renders the "framework" for the email
+* Individual view for each [Email Control](../develop/email-control.md).
 
-Have a look at the default theme.json file to se the available settings. One can also override the email rendering by putting razor temples inside this folder. If no override files is found in the theme the files from the default template will be used.
+If you need to override one or more of them just mimic the folder structure inside the global `NewsletterStudioExtensions`-folder or inside the NewsletterStudioExtensions-folder or inside your custom theme-folder.
+
+### Global override
+A global override would be used for all themes and basically override the default view. Create a `NewsletterStudioExtensions`-folder in the `App_Plugin`-folder and create a view folder inside this: 
+
+`App_Plugins/NewsletterStudioExtensions/Views/`
+
+Inside here, place the cshtml-files that you want to override.
+
+### Theme-specific overrides
+For a theme-specific override just create the view folder inside your theme, ie:
+
+`App_Plugins/MySite/NewsletterStudio/Themes/MyTheme/Views/`
+
+Inside here, place the cshtml-files that you want to override.
+
+### Example 1: Global override for button-view
+Create the file:
+`App_Plugins/NewsletterStudioExtensions/Views/Controls/button.cshtml`
+
+Update the content to reflect what you need, this file will now be used for all rendering except for when a given theme has a override for this file.
+
+### Example 2: Theme-specific override for button-view
+Create the file:
+`App_Plugins/MySite/NewsletterStudio/Themes/MyTheme/Views/Controls/button.cshtml`
+
+This view will now be used for all email rendering when "My Theme" is used.
+
+
 
 **TODO:**
-* [ ] Rendering
-* [ ] Email Controls
 * [ ] Fonts (custom fonts?)
