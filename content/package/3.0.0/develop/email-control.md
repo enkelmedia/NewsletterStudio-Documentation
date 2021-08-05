@@ -116,11 +116,16 @@ public class CustomHtmlEmailControlType : EmailControlTypeBase<CustomHtmlEmailCo
 After these classes has been created you need to tell Newsletter Studio about the EmailControlType, create a Composer and append it to the list of ControlTypes.
 
 ```csharp
+[ComposeAfter(typeof(NewsletterStudioComposer))]
 public class CustomNewsletterStudioComposer : IUserComposer
 {
     public void Compose(Composition composition)
     {
         composition.NewsletterStudio().EmailControlTypes.Append<CustomHtmlEmailControlType>();
+
+        // or 
+
+        composition.NewsletterStudio().EmailControlTypes.InsertBefore<ButtonEmailControlType,CustomHtmlEmailControlType>();
     }
 }
 ```
