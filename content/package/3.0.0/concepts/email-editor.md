@@ -43,4 +43,11 @@ Each control has different settings but most of them has settings for
 
 It's possible to create custom controls, please follow our [guide of custom email controls](../develop/email-control.md) for more details.
 
+## Merge Fields
+It's easy to insert dynamic content into the messages, use the "Field's"-dropdown in the text editor to get a list of avalible fields. These might differ depending on if you're sending a Campaign or Transactional Email and also depending on what type of [Merge Field Providers](../develop/merge-field-providers.md) that are activated.
+
+To use a Merge Field inside the email just put it's placeholder inside double brackets, ie: `{{email}}` or `{{firstname}}`. 
+
+### Fallbacks
+It's also possible to provide a fallback if the mergefield is not found, `{{age:"No age"}}` in this case the text "No age" will be written if the merge field `age` is not found.
 
