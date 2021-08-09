@@ -79,12 +79,24 @@ public class CustomHtmlEmailControlType : EmailControlTypeBase<CustomHtmlEmailCo
         return baseViewModel;
     }
 
-    public override CustomHtmlEmailControlViewModel DoUpdateUniqueViewModel(CustomHtmlEmailControlViewModel model, IRecipientDataModel recipient, object transactional)
+    public override CustomHtmlEmailControlViewModel DoUpdateUniqueViewModel(CustomHtmlEmailControlViewModel model, IRecipientDataModel recipient)
     {
         // This method is called once for every recipient, the "model" object will be a clone
         // of the result from the DoBuildViewModel-method. Here we could update specific properties
         // based on the recipient. In our case we don't need to do this.
-        
+
+        if (recipient is SubscriberRecipientDataModel subscriberRecipient)
+        {
+            // A Campaign in sending
+            // Do something with SubscriberRecipientDataModel 
+        }
+
+        if (recipient is TransactionalRecipientDataModel transactionalRecipient)
+        {
+            // A Transactional Email is sending
+            // Do something with TransactionalRecipientDataModel 
+        }
+
         return model;
     }
 
