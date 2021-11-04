@@ -4,14 +4,16 @@ If you want to use a content node as the source for your newsletter you can use 
 Or if you don't want to give your editors access the Newsletter Studio section, you could use the Content App-approach and then remove their access to the section so they only send Campaigns from the content-section.
 
 ## Setting it up
-By default any content type with the alias "newsletter" will activate the content app to send from the content section. If you want to show the content app on another content type, just configure this in web.config by adding a appSetting with the key `NewsletterStudio:CampaignContentTypes` and set the value to a comma-separated string of Content Type Aliases.
+By default any content type with the alias "newsletter" will activate the content app to send from the content section. If you want to show the content app on another content type, just configure this in `appsettings.json` by setting `NewsletterStudio:CampaignContentTypes` to a comma-separated string of Content Type Aliases. 
 
-```xml
-<appSettings>
-    ...
-    <add key="NewsletterStudio:CampaignContentTypes" value="myContentType,anotherContentType" />
-</appSettings>
-    
+Like this:
+
+```json
+{
+    "NewsletterStudio" : {
+        "CampaignContentTypes" :  "myCampaignContentTypeAlias,anotherCampaignContentTypeAlias"
+    }
+}    
 ```
 
 ### Legacy-way
