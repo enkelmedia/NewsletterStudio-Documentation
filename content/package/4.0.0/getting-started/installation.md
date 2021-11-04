@@ -19,7 +19,8 @@ We host several packages on NuGet:
 * NewsletterStudio - Contains only UI-file (App_Data)
 * NewsletterStudio.Web - Contains Umbraco-dependencies, most of the time any custom class library you might have should depend on this package.
 * NewsletterStudio.Core - Core files for the package with minimum external dependencies. Reference this package when you want to extend the functionality.
+* NewsletterStudio.CssInline - Package that deals with inlineing css into html when rendering the email.
 
 ## Install via the backoffice
-To the package via the Umbraco Backoffice, navigate to the "Packages"-section and search for "Newsletter Studio" or download the installation package from the package repository on [our.umbraco.com](https://our.umbraco.com/packages/backoffice-extensions/newsletter-studio-the-email-studio/).
+Since Umbraco 9 does not support package installation from the backoffice, this not supported vy v4+ of Newsletter Studio.
 
