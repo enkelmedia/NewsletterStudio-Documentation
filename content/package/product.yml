@@ -4,3 +4,7 @@ version_groups:
   - name: Umbraco 8
     versions:
     - version: 3.0.0
+  - name: Umbraco 9
+    versions:
+    - version: 4.0.0
+
