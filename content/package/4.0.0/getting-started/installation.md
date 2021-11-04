@@ -22,5 +22,5 @@ We host several packages on NuGet:
 * NewsletterStudio.CssInline - Package that deals with inlineing css into html when rendering the email.
 
 ## Install via the backoffice
-Since Umbraco 9 does not support package installation from the backoffice, this not supported vy v4+ of Newsletter Studio.
+Since Umbraco 9 don't support package installation from the backoffice this not supported by v4+ of Newsletter Studio.
 
