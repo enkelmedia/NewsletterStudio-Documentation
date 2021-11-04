@@ -1,4 +1,6 @@
 name: Newsletter Studio
 current_version: 3.0.0
-versions:
-  - version: 3.0.0
+version_groups:
+  - name: Umbraco 8
+    versions:
+    - version: 3.0.0
