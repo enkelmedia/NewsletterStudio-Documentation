@@ -3,7 +3,7 @@ title: Transactional Emails
 description: Documentation about Transactional Emails with Newsletter Studio for Umbraco
 ---
 # Transactional Emails
-With the support for Transactional Emails implementors can use our fancy email editor for all kinds of email that the site needs to send, that could be a "sign up confirmation", "forgot password" or a recipt from a receipt.
+With the support for Transactional Emails implementors can use our email editor for all kinds of emails that the site needs to send, that could be a "sign up confirmation", "forgot password" or a recipt from a webshop.
 
 ![Screenshot of the Transactional Emails](/media/transactional-list.png?width=1380&quality=100)
 
