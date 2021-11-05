@@ -30,8 +30,6 @@
   items:
     - title: Overview
       link: /develop/
-    - title: Tools
-      link: /develop/tools/
     - title: Email Control
       link: /develop/email-control/
     - title: Email Service Providers
@@ -46,6 +44,8 @@
       link: /develop/front-end-api/
     - title: Debugging / Issues
       link: /develop/debugging/
+    - title: Tools
+      link: /develop/tools/
 - title: Other
   items:
     - title: Sending from the content section
