@@ -13,5 +13,44 @@ The Email Service Provider needs to be configred in the Administration-section f
 
 ## Custom Email Service Provider
 
-TODO:
-* [ ] How to create custom? 123
+
+```csharp
+public class CoolEmailCompanyEmailServiceProvider : IEmailServiceProvider
+{
+    public string Alias => "coolEmail";
+    public string DisplayName => "Cool Email";
+    public string SettingsView => "~/App_Plugins/CoolEmail/settings.html";
+    public Dictionary<string, object> Settings { get; set; }
+    public SendOutConfiguration GetSendOutConfiguration()
+    {
+        throw new NotImplementedException();
+    }
+
+    public ValidationErrorCollection ValidateSettings(Dictionary<string, object> settings)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void Send(List<SendEmailJob> batch)
+    {
+        throw new NotImplementedException();
+    }
+
+    public CommandResult Send(MailMessage message)
+    {
+        throw new NotImplementedException();
+    }
+}
+```
+
+Adding the Email Service Provider to our list of services, in your startup code:
+
+
+```csharp
+public class MySiteComposer : IComposer {
+    public void Compose(IUmbracoBuilder builder)
+    {
+        builder.NewsletterStudio().EmailServiceProviders.Append<CoolEmailCompanyEmailServiceProvider>();
+    }
+}
+```

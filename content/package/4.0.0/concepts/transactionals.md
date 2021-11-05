@@ -35,7 +35,6 @@ After the model has been created you need to create new "Transactional Email"-te
 Then we need to trigger a sending of the email, this is done using the `INewsletterStudioService`. Just inject this into the controller, component or background job that needs to trigger transactional email.
 
 ```csharp
-[Route("SendTransactional/{action}/{id?}")]
 public class SendTransactionalController : Controller
 {
     private readonly INewsletterStudioService _newsletterStudioService;
@@ -53,13 +52,17 @@ public class SendTransactionalController : Controller
         model.MemberNumber = "123";
         model.ConfirmationLink = "https://www.lorem-ipsum.se/confirm/dsdff947kjdfg92mkfsd92";
 
-        _newsletterStudioService.SendTransactional(
-            SendTransactionalEmailRequest.Create()
-                .SendTo(model.Email)
-                .WithSubject("Hallo")
-        );
-                
-        return Content("It works");
+        var request = SendTransactionalEmailRequest.Create()
+            .SendTo(model.Email)
+            .WithSubject("Hallo")
+            .Build();
+
+        var result = _newsletterStudioService.SendTransactional(request);
+
+        if(result.Success)
+            return Content("It works");
+
+        return Content("Error: "+ result.Message);
     }
 }
 ```
