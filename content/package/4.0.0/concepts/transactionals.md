@@ -5,6 +5,8 @@ description: Documentation about Transactional Emails with Newsletter Studio for
 # Transactional Emails
 With the support for Transactional Emails implementors can use our fancy email editor for all kinds of email that the site needs to send, that could be a "sign up confirmation", "forgot password" or a recipt from a receipt.
 
+![Screenshot of the Transactional Emails](/media/transactional-list.png?width=1380&quality=100)
+
 ## Hooking it up
 Start by creating a model that defines the email you want to send.
 
@@ -52,16 +54,16 @@ public class SendTransactionalController : Controller
         model.ConfirmationLink = "https://www.lorem-ipsum.se/confirm/dsdff947kjdfg92mkfsd92";
 
         _newsletterStudioService.SendTransactional(
-            new SendTransactionalEmailRequest(model)
-                .AddTo(model.Email)
-            );
-            
-            
-        return Content("Yes alltså");
+            SendTransactionalEmailRequest.Create()
+                .SendTo(model.Email)
+                .WithSubject("Hallo")
+        );
+                
+        return Content("It works");
     }
 }
 ```
 
-
+We'll automatically look for a matching transactional email-template based on the type of model passed with the `SendTransactionalEmailRequest` but to be safe we recommend that you create a settings-node and use the `Transactional Email Picker`-data type to make if possible to select the template to use.
 
 
