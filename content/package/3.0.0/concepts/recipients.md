@@ -9,7 +9,7 @@ Coming soon...
 ![email-editor--edit](/media/recipients-import-paste.gif)
 
 ## Video MP4
-<video src="/media/import-recipients-paste.mp4" autoplay width="100%" />
+<video src="/media/import-recipients-paste.mp4" autoplay loop muted playsinline width="100%" />
 
 
 TODO:
