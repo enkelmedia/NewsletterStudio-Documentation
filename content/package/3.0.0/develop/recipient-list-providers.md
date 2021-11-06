@@ -106,6 +106,5 @@ public class SiteComposer : IUserComposer
         composition.NewsletterStudio().RecipientListProviders.Append<InMemoryRecipientListProvider>();
     }
 }
-
 ```
 

@@ -51,3 +51,30 @@ To use a Merge Field inside the email just put it's placeholder inside double br
 ### Fallbacks
 It's also possible to provide a fallback if the mergefield is not found, `{{age:"No age"}}` in this case the text "No age" will be written if the merge field `age` is not found.
 
+## Fonts
+The list of fonts is populated with the most common standard fonts and a list of webfoots from Google. Not all email client's support webfonts so it's recommended to use any of the standard fonts.
+
+### Adding fonts
+It's possible to manipulate the list of fonts that we show.
+
+```csharp
+ public  sealed class SiteComposer : IUserComposer
+{
+    public void Compose(Composition composition)
+    {
+        NewsletterStudio.Core.Editor.FontsCollection.All.Add(new FontDefinitionGroup()
+        {
+            Title = "Custom Fonts",
+            Definitions = new List<FontDefinition>()
+            {
+                new FontDefinition() {
+                    DisplayName = "SFProDisplay",
+                    FontFamilyValue = "SFProDisplay",
+                    CustomFontDeclarationCss = "@font-face { font-family: 'SFProDisplay'; src: url('https://www.mysite.com/fonts/SFProDisplay-Bold.woff2') format('woff'); font-weight: normal; font-style: normal; }"
+                }
+            }
+        });
+    }
+}
+
+```
