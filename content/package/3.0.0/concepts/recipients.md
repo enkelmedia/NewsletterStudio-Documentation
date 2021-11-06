@@ -3,15 +3,15 @@ title: Recipients
 description: Documentation about Recipients inside Newsletter Studio
 ---
 # Recipients
+Each [Workspace](../concepts/workspaces.md) has it's own set of recipients. The Recipients-view shows all recipients in the workspace and allows for search and filtering.
 
-Coming soon...
+![recipients-overview](/media/recipients-overview.png)
 
-![email-editor--edit](/media/recipients-import-paste.gif)
+## Recipient details
+Clicking on a recipient in a list will show the recipient details-view, here we show a timeline of the interactions made by this recipient. Editors can also change information and manage subscriptions to [Mailing Lists](../concepts/mailing-lists.md).
 
-## Video MP4
-<video src="/media/import-recipients-paste.mp4" autoplay loop muted playsinline width="100%" />
+![recipients-overview](/media/recipient-details.png)
 
+## Importing recipients
+Editors can import recipients in the [Mailing Lists](../concepts/mailing-lists.md)-view.
 
-TODO:
-* [ ] Recipient details
-* [ ] Importing
