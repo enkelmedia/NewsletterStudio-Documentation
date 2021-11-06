@@ -28,8 +28,8 @@
       link: /concepts/themes/
 - title: Develop
   items:
-    - title: Overview
-      link: /develop/
+    - title: Signup form
+      link: /develop/signup-form/
     - title: Email Control
       link: /develop/email-control/
     - title: Email Service Providers
@@ -38,19 +38,18 @@
       link: /develop/recipient-list-providers/
     - title: Merge Field Providers
       link: /develop/merge-field-providers/
+    - title: Render Tasks
+      link: /develop/render-tasks/      
     - title: Events
       link: /develop/events/
     - title: Front end API
       link: /develop/front-end-api/
     - title: Debugging / Issues
       link: /develop/debugging/
-    - title: Tools
-      link: /develop/tools/
 - title: Other
   items:
     - title: Sending from the content section
       link: /develop/sending-from-content-section/
-    - title: Signup form
-      link: /develop/tools/
+
 
 

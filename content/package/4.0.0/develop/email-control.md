@@ -8,6 +8,7 @@ The actual content inside the email editor is always contained inside a "Email C
 * Image
 * Rich Text
 * Button
+* Macro
 
 These controls are displayed in the toolbox on the right hand side inside the email editor.
 
@@ -128,16 +129,14 @@ public class CustomHtmlEmailControlType : EmailControlTypeBase<CustomHtmlEmailCo
 After these classes has been created you need to tell Newsletter Studio about the EmailControlType, create a Composer and append it to the list of ControlTypes.
 
 ```csharp
-[ComposeAfter(typeof(NewsletterStudioComposer))]
-public class CustomNewsletterStudioComposer : IUserComposer
-{
-    public void Compose(Composition composition)
+public class MySiteComposer : IComposer {
+    public void Compose(IUmbracoBuilder builder)
     {
-        composition.NewsletterStudio().EmailControlTypes.Append<CustomHtmlEmailControlType>();
+        builder.NewsletterStudio().EmailControlTypes.Append<AddTrackingPixelRenderTask>();
 
-        // or 
+        // or
 
-        composition.NewsletterStudio().EmailControlTypes.InsertBefore<ButtonEmailControlType,CustomHtmlEmailControlType>();
+        builder.NewsletterStudio().EmailControlTypes.InsertBefore<AddClickTagsRenderTask>();
     }
 }
 ```

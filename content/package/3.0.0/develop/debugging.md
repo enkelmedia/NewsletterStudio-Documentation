@@ -11,7 +11,7 @@ This settings will activate a logger that outputs all links from sent emails to 
 
 Values: true / false (default: false)
 
-```
+```xml
 <add key="NewsletterStudio.Debug.LogCampaignLinks" value="true" />
 ```
 
@@ -19,7 +19,7 @@ Values: true / false (default: false)
 The path to any debug files should be created.
 
 Value: Example: c:\temp (default: c:\temp)
-```
+```xml
 <add key="NewsletterStudio.Debug.DebugFilesPath" value="C:\temp\debug" />
 ```
 

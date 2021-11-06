@@ -8,6 +8,7 @@ The actual content inside the email editor is always contained inside a "Email C
 * Image
 * Rich Text
 * Button
+* Macro
 
 These controls are displayed in the toolbox on the right hand side inside the email editor.
 
