@@ -65,7 +65,7 @@ public class SendTransactionalController : Controller
 }
 ```
 
-We'll automatically look for a matching transactional email-template based on the type of model passed with the `SendTransactionalEmailRequest` but to be safe we recommend that you create a settings-node and use the `Transactional Email Picker`-data type to make if possible to select the template to use.
+We'll automatically look for a matching transactional email-template based on the type of model passed with the `SendTransactionalEmailRequest` but to be safe we recommend that you create a settings-node and use the `Transactional Email Picker`-data type to make it possible to select the template to use.
 
 
 
