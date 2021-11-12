@@ -1,5 +1,5 @@
 ---
-title: Recipient Providers
+title: Recipient List Providers
 description: Documentation about Recipient Providers inside Newsletter Studio
 ---
 # Recipient Providers
