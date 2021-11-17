@@ -57,6 +57,7 @@ public class SendTransactionalController : Controller
             SendTransactionalEmailRequest.Create()
                 .SendTo(model.Email)
                 .WithSubject("Hallo")
+                .Build()
         );
             
             
