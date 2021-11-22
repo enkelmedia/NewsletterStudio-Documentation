@@ -3,7 +3,7 @@ title: Transactional Emails
 description: Documentation about Transactional Emails with Newsletter Studio for Umbraco
 ---
 # Transactional Emails
-With the support for Transactional Emails implementors can use our email editor for all kinds of emails that the site needs to send, that could be a "sign up confirmation", "forgot password" or a receipt from a webshop.
+With the support for Transactional Emails implementers can use our email editor for all kinds of emails that the site needs to send, that could be a "sign up confirmation", "forgot password" or a receipt from a webshop.
 
 ![Screenshot of the Transactional Emails](/media/transactional-list.png?width=1380&quality=100)
 
@@ -67,7 +67,6 @@ public class SendTransactionalController : Controller
 ```
 
 We'll automatically look for a matching transactional email-template based on the type of model passed with the `SendTransactionalEmailRequest` but to be safe we recommend that you create a settings-node and use the `Transactional Email Picker`-data type to make if possible to select the template to use.
-
 
 
 

@@ -19,4 +19,3 @@ We recommend reading the [basics](getting-started/basics.md) before jumping into
 ### Installation
 * [Installation](getting-started/installation.md)
 
-

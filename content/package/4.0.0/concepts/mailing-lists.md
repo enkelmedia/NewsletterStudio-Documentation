@@ -3,7 +3,7 @@ title: Mailing Lists
 description: Documentation about Mailing Lists inside Newsletter Studio
 ---
 # Mailing Lists
-The Mailing Lists are used to group [recipients](../concepts/recipients.md) into different lists. Each recipient can be connected to zero or more lists and the connection also as a `Status`, the status can be `Pending`, `Subscribed` or `Unsubscribed`. When using "Double Opt In" new recipients will have a `Pending` connection to the Mailing List until the subscription is confirmed.
+The Mailing Lists are used to group [recipients](../concepts/recipients.md) into different lists. Each recipient can be connected to zero or more lists and the connection also as a `Status`, the status can be `Pending`, `Subscribed` or `Unsubscribed`. When using "Double opt In" new recipients will have a `Pending` connection to the Mailing List until the subscription is confirmed.
 
 ![email-editor--edit](/media/mailing-lists--overview.png)
 

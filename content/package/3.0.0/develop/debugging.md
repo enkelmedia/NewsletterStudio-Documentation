@@ -7,7 +7,7 @@ description: Documentation about debugging Newsletter Studio-issues
 Some configuration settings
 
 ### Log Campaign Links and issues with link tracking
-This settings will activate a logger that outputs all links from sent emails to a text file, it will also log any errors from TrackingControllerActions regarding parsing the tokens.
+This setting will activate a logger that outputs all links from sent emails to a text file, it will also log any errors from TrackingControllerActions regarding parsing the tokens.
 
 Values: true / false (default: false)
 
@@ -24,7 +24,7 @@ Value: Example: c:\temp (default: c:\temp)
 ```
 
 ### Logging
-We log to the Umbraco Log (in the backoffice: Settings / Log Viewer). The majority of our messages is logged with the priority "Debug" so do debug using the log, make sure that your configuration is correct.
+We log to the Umbraco Log (in the backoffice: Settings / Log Viewer). The majority of our messages are logged with the priority "Debug" so do debug using the log, make sure that your configuration is correct.
 
 In the `/config/serilog.config`-file, make sure the following lines are present to view debug-messages.
 
