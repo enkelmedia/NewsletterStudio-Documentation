@@ -1,13 +1,13 @@
 # Themes
 
-Emails in Newsletter Studio is all based on a theme. The theme contains
+Emails in Newsletter Studio are all based on a theme. The theme contains
 
-* Default settings for colors, font size and more.
-* HTML-templates (Razor) for rendering the email and controls.
+* Default settings for colors, font size, and more.
+* HTML templates (Razor) for rendering the email and controls.
 
 The default theme that is shipped with the package is based on best practices and provides a solid foundation for the rendering.
 
-You can easily create your own themes to override the default behavior. Themes only need contain the overrides as we'll fall back on values from the default theme if any setting is not found.
+You can easily create your own themes to override the default behavior. Themes only need to contain the overrides as we'll fall back on values from the default theme if any setting is not found.
 
 You should never make changes to the default theme as these changes might be overwritten when updating the package.
 
@@ -18,15 +18,15 @@ Themes lives inside the "App Plugins" folder, the default theme shipped with New
 
 Avoid changing these files directly as they might be overwritten during upgrades. To customize things create your own theme.
 
-To create a new theme you first need a folder inside App_Plugins, let's use "MySite" as an example and let's call the theme "MyTheme", the folder can be named what ever suites your project. We need to create folders with the following structure:
+To create a new theme you first need a folder inside App_Plugins, let's use "MySite" as an example, and let's call the theme "MyTheme", the folder can be named whatever suits your project. We need to create folders with the following structure:
 
 `App_Plugins/MySite/NewsletterStudio/Themes/MyTheme`
 
-We will look at each folder in "App_Plugins" and look for a sub folder called "NewsletterStudio". So basically a wildcard search like this:
+We will look at each folder in "App_Plugins" and look for a subfolder called "NewsletterStudio". So basically a wildcard search like this:
 
 `App_Plguins/*/NewsletterStudio/Themes/*`
 
-Inside "MyTheme"-folder we need to create the file "theme.json" to declare our theme. Custom themes only override settings from the default theme so the minimum content of this file would be:
+Inside the "MyTheme"-folder we need to create the file "theme.json" to declare our theme. Custom themes only override settings from the default theme, so the minimum content of this file would be:
 
 ```json
 {
@@ -90,7 +90,7 @@ It's possible to override:
 * The main "email.csthml" file which renders the "framework" for the email
 * Individual view for each [Email Control](../develop/email-control.md).
 
-If you need to override one or more of them just mimic the folder structure inside the global `NewsletterStudioExtensions`-folder or inside the NewsletterStudioExtensions-folder or inside your custom theme-folder.
+If you need to override one or more of them just mimic the folder structure inside the global `NewsletterStudioExtensions`-folder or inside the NewsletterStudioExtensions-folder or inside your custom theme folder.
 
 ### Global override
 A global override would be used for all themes and basically override the default view. Create a `NewsletterStudioExtensions`-folder in the `App_Plugin`-folder and create a view folder inside this: 
@@ -110,15 +110,13 @@ Inside here, place the cshtml-files that you want to override.
 Create the file:
 `App_Plugins/NewsletterStudioExtensions/Views/Controls/button.cshtml`
 
-Update the content to reflect what you need, this file will now be used for all rendering except for when a given theme has a override for this file.
+Update the content to reflect what you need, this file will now be used for all rendering except for when a given theme has an override for this file.
 
 ### Example 2: Theme-specific override for button-view
 Create the file:
 `App_Plugins/MySite/NewsletterStudio/Themes/MyTheme/Views/Controls/button.cshtml`
 
 This view will now be used for all email rendering when "My Theme" is used.
-
-
 
 **TODO:**
 * [ ] Fonts (custom fonts?)

@@ -30,9 +30,9 @@ public class ForgotPasswordEmailModel
 }
 ```
 
-After the model has been created you need to create new "Transactional Email"-template for this model. Start up the site, go to the Email-section -> Transactionals -> Emails and create a new Transactional Email. Click on the "Design email"-button and follow the steps, make sure to choose `Forgot Password` as Data Model for the template. Edit the email and save the changes.
+After the model has been created you need to create new a "Transactional Email"-template for this model. Startup the site, go to the Email-section -> Transactionals -> Emails and create a new Transactional Email. Click on the "Design Email"-button and follow the steps, make sure to choose `Forgot Password` as Data Model for the template. Edit the email and save the changes.
 
-Then we need to trigger a sending of the email, this is done using the `INewsletterStudioService`. Just inject this into the controller, component or background job that needs to trigger transactional email.
+Then we need to trigger a sending of the email, this is done using the `INewsletterStudioService`. Just inject this into the controller, component, or background job that needs to trigger transactional email.
 
 ```csharp
 [Route("SendTransactional/{action}/{id?}")]
@@ -66,7 +66,4 @@ public class SendTransactionalController : Controller
 }
 ```
 
-We'll automatically look for a matching transactional email-template based on the type of model passed with the `SendTransactionalEmailRequest` but to be safe we recommend that you create a settings-node and use the `Transactional Email Picker`-data type to make if possible to select the template to use.
-
-
-
+We'll automatically look for a matching transactional email template based on the type of model passed with the `SendTransactionalEmailRequest` but to be safe we recommend that you create a settings-node and use the `Transactional Email Picker`-data type to make it possible to select the template to use.
