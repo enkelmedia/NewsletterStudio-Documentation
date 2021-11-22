@@ -8,7 +8,7 @@ The actual work of dispatching/sending an email is performed by a **Email Servic
 * **SMTP** - Used to send emails via SMTP servers 
 * **SMTP Pickup Directory** - Can be used during development/testing to place e-mails in a folder on the development/test-computer.
 
-The Email Service Provider needs to be configred in the Administration-section for each [Workspace](../concepts/workspaces.md).
+The Email Service Provider needs to be configured in the Administration-section for each [Workspace](../concepts/workspaces.md).
 
 
 ## Custom Email Service Provider

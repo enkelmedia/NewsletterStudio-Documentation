@@ -10,7 +10,7 @@ These providers exposes lists and recipients for Campaigns, it's a Recipient Pro
 ## Custom Recipient Provider
 Developers can create custom Recipient Providers to expose lists from any custom source, that could be a CRM, a webshop, a custom database table or any other data source.
 
-The custom class needs to implement `IRecipientListProvider` and needs to be registered during startup. It's also common to implement a [Merge Field Provider](../develop/merge-field-providers.md) to work in conjuntion with the Recipient List Provider.
+The custom class needs to implement `IRecipientListProvider` and needs to be registered during startup. It's also common to implement a [Merge Field Provider](../develop/merge-field-providers.md) to work in conjunction with the Recipient List Provider.
 
 ### Example
 

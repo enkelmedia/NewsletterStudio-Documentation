@@ -7,16 +7,16 @@ Emails in Newsletter Studio is all based on a theme. The theme contains
 
 The default theme that is shipped with the package is based on best practices and provides a solid foundation for the rendering.
 
-You can easily create your own themes to override the default behaviour. Themes only need contain the overrides as we'll fall back on values from the default theme if any setting is not found.
+You can easily create your own themes to override the default behavior. Themes only need contain the overrides as we'll fall back on values from the default theme if any setting is not found.
 
 You should never make changes to the default theme as these changes might be overwritten when updating the package.
 
 ## How to create a Theme
-Themes lives inside the "App Plugins" folder, the default theme shipped with Newsletter STudio is located here:
+Themes lives inside the "App Plugins" folder, the default theme shipped with Newsletter Studio is located here:
 
 `App_Plugins/NewsletterStudio/Themes/Default/`
 
-Avoid chaning these files directly as they might be overwritten during upgrades. To customize things create your own theme.
+Avoid changing these files directly as they might be overwritten during upgrades. To customize things create your own theme.
 
 To create a new theme you first need a folder inside App_Plugins, let's use "MySite" as an example and let's call the theme "MyTheme", the folder can be named what ever suites your project. We need to create folders with the following structure:
 
@@ -26,7 +26,7 @@ We will look at each folder in "App_Plugins" and look for a sub folder called "N
 
 `App_Plguins/*/NewsletterStudio/Themes/*`
 
-Inside "MyTheme"-folder we need to create the file "theme.json" to declare our theme. Custom themes only override settings from the default theme so the minimun content of this file would be:
+Inside "MyTheme"-folder we need to create the file "theme.json" to declare our theme. Custom themes only override settings from the default theme so the minimum content of this file would be:
 
 ```json
 {
@@ -84,7 +84,7 @@ It looks something like this:
 ```
 
 ## Overriding rendering views (cshtml)
-There are two ways to override the rendering of the email. If you look into `App_Plugins/NewsletterStudio/Themes/Default/Views` you should see all views that are invloved in the rendering.
+There are two ways to override the rendering of the email. If you look into `App_Plugins/NewsletterStudio/Themes/Default/Views` you should see all views that are involved in the rendering.
 
 It's possible to override:
 * The main "email.csthml" file which renders the "framework" for the email

@@ -60,8 +60,8 @@ public class SubscribeSurfaceController : SurfaceController
 
 The AddRecipientRequest-class contains a fluent API to set data for the operation, here are some of methods:
 * **WithName()**: Expects a full name and tries to parse it into first/last name.
-* **WithFirstname()**: Sets the firstname
-* **WithLastname()**: Sets the lastname
+* **WithFirstname()**: Sets the firs name
+* **WithLastname()**: Sets the last name
 * **SubscribeTo()**: Subscribes the new recipient to a given Mailing List. (Tip: Use the Mailing List Picker property editor in the backoffice UI if this needs to be a setting).
 * **ForWorkspace()**: Sets the Workspace for the new recipient. Only needed when the solution has multiple workspaces.
 * **WithCustomField()** Sets a custom field value for the recipient. Alias must match a configured field alias (Workspace settings)

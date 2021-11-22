@@ -18,7 +18,7 @@ Here you can configure Workspace-level settings for:
 * Permissions for Users and User Groups
 * Custom Fields
 * Providers and Email Editor
-* Site Url
+* Site url
 * Email Service Provider (SMTP and more)
 
 

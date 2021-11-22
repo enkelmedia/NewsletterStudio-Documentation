@@ -4,7 +4,7 @@ description: Documentation about The Email Editor inside Newsletter Studio
 ---
 # Email Editor
 
-The buildt in editor makes the creative process of designing responsive emails for desktop, mobile and tablets a breeze.
+The built in editor makes the creative process of designing responsive emails for desktop, mobile and tablets a breeze.
 
 ![email-editor--edit](/media/email-editor--edit.png)
 
@@ -44,15 +44,15 @@ Each control has different settings but most of them has settings for
 It's possible to create custom controls, please follow our [guide of custom email controls](../develop/email-control.md) for more details.
 
 ## Merge Fields
-It's easy to insert dynamic content into the messages, use the "Field's"-dropdown in the text editor to get a list of avalible fields. These might differ depending on if you're sending a Campaign or Transactional Email and also depending on what type of [Merge Field Providers](../develop/merge-field-providers.md) that are activated.
+It's easy to insert dynamic content into the messages, use the "Field's"-dropdown in the text editor to get a list of available fields. These might differ depending on if you're sending a Campaign or Transactional Email and also depending on what type of [Merge Field Providers](../develop/merge-field-providers.md) that are activated.
 
 To use a Merge Field inside the email just put it's placeholder inside double brackets, ie: `{{email}}` or `{{firstname}}`. 
 
 ### Fallbacks
-It's also possible to provide a fallback if the mergefield is not found, `{{age:"No age"}}` in this case the text "No age" will be written if the merge field `age` is not found.
+It's also possible to provide a fallback if the merge field is not found, `{{age:"No age"}}` in this case the text "No age" will be written if the merge field `age` is not found.
 
 ## Fonts
-The list of fonts is populated with the most common standard fonts and a list of webfoots from Google. Not all email client's support webfonts so it's recommended to use any of the standard fonts.
+The list of fonts is populated with the most common standard fonts and a list of web fonts from Google. Not all email client's support web fonts so it's recommended to use any of the standard fonts.
 
 ### Adding fonts
 It's possible to manipulate the list of fonts that we show.

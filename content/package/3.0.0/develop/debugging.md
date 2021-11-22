@@ -7,7 +7,7 @@ description: Documentation about debugging Newsletter Studio-issues
 Some configuration settings
 
 ### Log Campaign Links and issues with link tracking
-This settings will activate a logger that outputs all links from sent emails to a text file, it will also log any errors from TrackingControllerActions reg. parsing the tokens.
+This settings will activate a logger that outputs all links from sent emails to a text file, it will also log any errors from TrackingControllerActions regarding parsing the tokens.
 
 Values: true / false (default: false)
 

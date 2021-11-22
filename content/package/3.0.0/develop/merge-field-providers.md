@@ -16,7 +16,7 @@ Each "Custom Field" on a recipient can also be inserted as a merge field in the 
 ## Extending Merge Fields
 It's possible to add custom merge fields to the email editor, this is useful if you create a custom integration and would like to append more dynamic fields that the editor can choose from so that they don't have to remember the exact placeholder. A custom merge field provider must implement `ICampaignEmailMergeFieldProvider`or `ITransactionalEmailMergeFieldProvider` depending on what context it's needed for.
 
-Many times a Merge Field Provider is created togheter with a [Recipient List Provider](../develop/recipient-list-providers.md)
+Many times a Merge Field Provider is created together with a [Recipient List Provider](../develop/recipient-list-providers.md)
 
 ### Example
 

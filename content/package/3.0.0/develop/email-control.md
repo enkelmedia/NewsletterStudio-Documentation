@@ -256,7 +256,7 @@ We also need to tell Umbraco to load this file into the backoffice, create a `pa
 }
 ```
 
-Now, update the `edit.html` and add a textarea to input the custom HTML:
+Now, update the `edit.html` and add a text area to input the custom HTML:
 
 ```html
 <div ng-controller="NewsletterStudioCustom.CustomHtmlEmailControl.EditController as editVm"
@@ -296,7 +296,7 @@ The "meta"-property can be used to pass meta-data from the server to the email c
 
 We're using the "controller as" approach for our views inside the editor and our controller is named `vm` so avoid using this as your controller name inside the custom views for Email Controls.
 
-Next, we need to make sure that the preview is rendering the content from the textarea, edit `view.html` to look like this:
+Next, we need to make sure that the preview is rendering the content from the text area, edit `view.html` to look like this:
 
 ```html
 <div ng-style="{'padding-top' : control.padding.top, 

@@ -11,3 +11,4 @@ This is useful for installations that host multiple websites where each website 
 Is easy to set up permissions for the Workspace based on backoffice User Groups or on User level.
 
 Only Umbraco users in the Administrator-role can created/edit Workspaces.
+
