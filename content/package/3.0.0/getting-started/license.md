@@ -7,7 +7,7 @@ To use the full version of the package you need to purchase a license on this we
 
 
 ## Automatic installation
-Administrators can download and install the license via the backoffice. This will work both if you provided a Workspace-key during the checkout or if you want to associate the current website with a license.
+Administrators can download and install the license via the backoffice. This will work both if you provided a Workspace key during the checkout or if you want to associate the current website with a license.
 
 
 
@@ -20,7 +20,7 @@ Administrators can download and install the license via the backoffice. This wil
 
 ## Manually installing the license
 
-If you did configure the license during the checkout process, you need to download the `newsletterStudio.lic` file from this site. After this just place the this file inside the `App_Data`-folder in the root of your project.
+If you did configure the license during the checkout process, you need to download the `newsletterStudio.lic` file from this site. After this just place the file inside the `App_Data`-folder at the root of your project.
 
 ```
 /App_Data/newsletterStudio.lic

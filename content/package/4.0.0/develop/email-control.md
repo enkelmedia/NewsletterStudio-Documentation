@@ -3,24 +3,24 @@ title: Email Control
 description: Documentation about Email Controls inside Newsletter Studio
 ---
 # Email Controls
-The actual content inside the email editor is always contained inside a "Email Control", some core controls are:
+The actual content inside the email editor is always contained inside an "Email Control", some core controls are:
 
 * Image
 * Rich Text
 * Button
 * Macro
 
-These controls are displayed in the toolbox on the right hand side inside the email editor.
+These controls are displayed in the toolbox on the right-hand side inside the email editor.
 
 ## Custom Email Control
-It's possible to create custom Email Control's and use them for both Campaigns and Transactional emails. Follow this guide to create your own control. Our example is a control that allows for custom HTML to be pasted into the email using a text-area but the possibilities is endless. 
+It's possible to create custom Email Controls and use them for both Campaigns and Transactional emails. Follow this guide to create your own control. Our example is a control that allows for custom HTML to be pasted into the email using a text area, but the possibilities are endless. 
 
-Start by creating a new folder inside the "App_Plugins"-folder of your project, let's call it `NewsletterStudioCustom` (or what ever you would like.) and inside this a folder called `CustomHtmlEmailControl`.
+Start by creating a new folder inside the "App_Plugins"-folder of your project, let's call it `NewsletterStudioCustom` (or whatever you would like.), and inside this a folder called `CustomHtmlEmailControl`.
 
-Inside the folder create another folder called `Models` and add the CS-filers for the Data Model, View Model and Control Type to this folder.
+Inside the folder create another folder called `Models` and add the CS-filers for the Data Model, View Model, and Control Type to this folder.
 
 ## The Data Model
-This model contains the data that your control must store, that could be raw HTML (as for the Rick Text-control) or image-urls, links etc. Each time the control is used inside a email this model will be used to serialize and store the data.
+This model contains the data that your control must store, which  could be raw HTML (as for the Rick Text-control) or image-urls, links, etc. Each time the control is used inside an email this model will be used to serialize and store the data.
 
 In the model's folder, create a class called `CustomHtmlEmailControlData.cs`
 
@@ -51,7 +51,7 @@ public class CustomHtmlEmailControlViewModel : EmailControlViewModelBase
 ```
 
 ## The Control Type
-The Control Type is the main definition for the Email Control, this class is responsible for processing data and also holds important meta-data about the Email Control (like alias, icon etc.).
+The Control Type is the main definition for the Email Control, this class is responsible for processing data and also holds important meta-data about the Email Control (like alias, icon, etc.).
 
 In the model's folder, create a class called `CustomHtmlEmailControlType.cs`
 
@@ -126,7 +126,7 @@ public class CustomHtmlEmailControlType : EmailControlTypeBase<CustomHtmlEmailCo
 ```
 
 ## Configure the Control Type
-After these classes has been created you need to tell Newsletter Studio about the EmailControlType, create a Composer and append it to the list of ControlTypes.
+After these classes have been created you need to tell Newsletter Studio about the EmailControlType, create a Composer and append it to the list of ControlTypes.
 
 ```csharp
 public class MySiteComposer : IComposer {
@@ -141,7 +141,7 @@ public class MySiteComposer : IComposer {
 }
 ```
 
-When this is done the Email Control Type should show up in the toolbox, otherwise you might need to go to "Administration -> (Workspace)" and configured the Allowed Email Controls. 
+When this is done the Email Control Type should show up in the toolbox, otherwise, you might need to go to "Administration -> (Workspace)" and configure the Allowed Email Controls. 
 
 We also need to add translations for our email editor so that we get a nice name in the UI. Create the folder `App_Plugins/NewsletterStudioCustom/Lang` and put a file called `en-US.xml` inside this directory. Use the following content:
 
@@ -155,7 +155,7 @@ We also need to add translations for our email editor so that we get a nice name
 </language>
 ```
 
-Note the alias, it's a combination of "control_" and the alias of the Email Control Type. This will ensure that english backoffice users get the right text in the UI, of course you can use any language you like, this is standard Umbraco localizations.
+Note the alias, it's a combination of "control_" and the alias of the Email Control Type. This will ensure that English backoffice users get the right text in the UI, of course, you can use any language you like, this is standard Umbraco localizations.
 
 Also, we need to create the html-views for the rendering and edit in the backoffice, create these two files as placeholders:
 
@@ -173,7 +173,7 @@ Also, we need to create the html-views for the rendering and edit in the backoff
 </div>
 ```
 
-And finally we need to render the cshtml-files for the control, there are several ways to create the cshtml-file to be rendered inside the email.
+And finally, we need to render the cshtml-files for the control, there are several ways to create the cshtml-file to be rendered inside the email.
 
 **Quick and Dirty**
 
@@ -206,16 +206,16 @@ Create the folder for the view:
 }
 ```
 
-**NOTE:** When the package move into stable release there will be a solution to this so that we can create a cshtml-file in a folder outside the package but that does not force the creation of a custom theme. From Beta7 onwards it's possible to create the a shared view without having to create a Theme.
+**NOTE:** When the package move into stable release there will be a solution to this so that we can create a cshtml-file in a folder outside the package, but that does not force the creation of a custom theme. From Beta7 onwards it's possible to create a shared view without having to create a Theme.
 
-Add the following folder: `App_Plugins/NewsletterStudioExtensions/Views/Control`and put the `customhtml.cshtml` file in this folder. This will be used no matter what theme that is currently in use. To override the controls rendering for a given theme, see the instructions for how to work with [Themes](../concepts/themes.md).
+Add the following folder: `App_Plugins/NewsletterStudioExtensions/Views/Control` and put the `customhtml.cshtml` file in this folder. This will be used no matter what theme is currently in use. To override the controls rendering for a given theme, see the instructions for how to work with [Themes](../concepts/themes.md).
 
 The new control icon should now appear in the toolbox in the backoffice. And you should be able to drag it into the content of the email.
 
 ![email-editor--with-toolbox](/media/guides/email-control/toolbox-with-control.png)
 
 ## Creating the backoffice experience
-The two html-files we just created is used to build the editor experience in the backoffice. The "view.html"-file is what will be visually rendered in the email when editing and "edit.html" is will be rendered inside the toolbox on the right hand side when the control is selected.
+The two html-files we just created are used to build the editor experience in the backoffice. The "view.html"-file is what will be visually rendered in the email when editing and "edit.html" is will be rendered inside the toolbox on the right-hand side when the control is selected.
 
 To create some more functionality we need to work on these views so that we can input and render data. Let's start with adding a controller for the edit-view.
 
@@ -274,7 +274,7 @@ Now, update the `edit.html` and add a textarea to input the custom HTML:
 </div>
 ```
 
-**NOTE**: Here you can see that we're using the ng-init-directive to call the init-method on our controller and passing in the currently selected control, this way the controller will get a reference to selected control. The object `vm.selectedControl` is the actual data model that will be stored for this control, in our case it looks something like this:
+**NOTE**: Here you can see that we're using the ng-init-directive to call the init-method on our controller and pass in the currently selected control, this way the controller will get a reference to the selected control. The object `vm.selectedControl` is the actual data model that will be stored for this control, in our case, it looks something like this:
 
 ```javascript
 {
@@ -307,6 +307,6 @@ Next, we need to make sure that the preview is rendering the content from the te
 </div>
 ```
 
-This is using the custom "ns-html"-directive that we ship to render "raw" HTML inside of the views.
+This is using the custom "ns-html"-directive that we ship to render "raw" HTML inside the views.
 
-With all this in place you should have a working Email Control for adding Custom HTML into the body of the email.
+With all this in place you, should have a working Email Control for adding Custom HTML into the body of the email.

@@ -3,7 +3,7 @@ title: Installation
 description: How to install Newsletter Studio into your Umbraco website.
 ---
 # Installation
-There is two ways to install the package, either use the backoffice of Umbraco to install/upload the package or using the recommended way which is to install the package via NuGet. 
+When installing the package on Umbraco 9, you need to use the NuGet package.
 
 ## Install via NuGet
 The package can be found on [NuGet](https://www.nuget.org/packages/NewsletterStudio/).

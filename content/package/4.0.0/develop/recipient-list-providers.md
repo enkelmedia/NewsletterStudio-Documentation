@@ -3,12 +3,12 @@ title: Recipient List Providers
 description: Documentation about Recipient Providers inside Newsletter Studio
 ---
 # Recipient Providers
-These providers exposes lists and recipients for Campaigns, it's a Recipient Provider that shows the Umbraco Member groups when choosing recipients for a Campaign. 
+These providers expose lists and recipients for Campaigns, it's a Recipient Provider that shows the Umbraco Member groups when choosing recipients for a Campaign. 
 
 ![Choose recipients when sending campaigns](/media/campaigns-choose-recipients.png)
 
 ## Custom Recipient Provider
-Developers can create custom Recipient Providers to expose lists from any custom source, that could be a CRM, a webshop, a custom database table or any other data source.
+Developers can create custom Recipient Providers to expose lists from any custom source That could be a CRM, a webshop, a custom database table or any other data source.
 
 The custom class needs to implement `IRecipientListProvider` and needs to be registered during startup. It's also common to implement a [Merge Field Provider](../develop/merge-field-providers.md) to work in conjuntion with the Recipient List Provider.
 
