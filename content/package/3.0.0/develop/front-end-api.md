@@ -88,6 +88,19 @@ var request = AddOrUpdateSubscriptionsRequest.Create()
 var result = _newsletterStudioService.AddOrUpdateSubscriptions(request);
 ```
 
+## Custom Unsubscribe-page
+It's possible to create a custom page where you can handle the unsubscription-process. This page can for example use the API in `INewsletterStudioService` to list the current subscriptions for the recipient.
+
+First, configure the "Unsubscribe confirmation url" in the `Settings` under the Workspace.
+
+When this is configured we'll route recipients that want to unsubscribe to this page and append a token to the URL.
+
+```
+https://www.mypage.com/custom-unsubscribe?token=acb123.....
+```
+
+When rendering this page you can use the `ParseUnsubscribeToken(string token)`-method of `INewsletterStudioService` to get information about the recipient eg. the RecipientKey. Further down the process you can pass the RecipientKey to the "GetSubscriptionsFor()", "RemoveRecpient()" or "Unsubscribe()"-methods.
+
 ## Other useful methods
 There is plenty of other useful methods on the INewsletterStudioService.
 
@@ -97,3 +110,4 @@ There is plenty of other useful methods on the INewsletterStudioService.
 * **GetSubscriptionsFor()** - Get's all mailing list-subscriptions for a given recipient.
 * **IsValidEmail()** - Checks if a string is a valid e-mail address.
 * **GetMailingListsForAllWorkspaces()** - Gets all mailing lists for all Workspaces.
+* **RemoveRecipient()** - Removes a recipient and makes and tracking data anonymized.
