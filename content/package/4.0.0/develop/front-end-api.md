@@ -110,4 +110,4 @@ There is plenty of other useful methods on the INewsletterStudioService.
 * **GetSubscriptionsFor()** - Get's all mailing list-subscriptions for a given recipient.
 * **IsValidEmail()** - Checks if a string is a valid e-mail address.
 * **GetMailingListsForAllWorkspaces()** - Gets all mailing lists for all Workspaces.
-* **RemoveRecipient()** - Removes a recipient and makes and tracking data anonymized.
+* **RemoveRecipient()** - Removes a recipient and makes tracking data anonymized.
