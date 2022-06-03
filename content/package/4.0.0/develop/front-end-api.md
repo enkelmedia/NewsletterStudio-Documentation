@@ -95,7 +95,7 @@ First, configure the "Unsubscribe confirmation url" in the `Settings` under the 
 
 When this is configured we'll route recipients that want to unsubscribe to this page and append a token to the URL.
 
-```
+```json
 https://www.mypage.com/custom-unsubscribe?token=acb123.....
 ```
 
