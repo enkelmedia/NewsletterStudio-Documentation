@@ -1,12 +1,12 @@
 ---
-title: 4.0.0 Overview
+title: 10.0.0 Overview
 description: Here we'll outline things you need to know to work with Newsletter Studio
 ---
 
 
 # Overview
 
-Newsletter Studio 4
+Newsletter Studio 10
 
 Here we'll outline some of the important basics about Newsletter Studio. Use this as a starting point before reading details about specific features in the package.
 
