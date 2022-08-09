@@ -8,6 +8,11 @@ The actual work of dispatching/sending an email is performed by an **Email Servi
 * **SMTP** - Used to send emails via SMTP servers 
 * **SMTP Pickup Directory** - Can be used during development/testing to place e-mails in a folder on the development/test-computer.
 
+We also provide some open source implementations of providers that you can use in your project or use as a reference for your own custom implementations:
+
+* Mailjet: https://www.newsletterstudio.org/documentation/package/4.0.0/develop/email-service-providers/
+* More come, if you have a provider that you want to share - let us know
+
 The Email Service Provider needs to be configred in the Administration-section for each [Workspace](../concepts/workspaces.md).
 
 
