@@ -13,7 +13,7 @@ We also provide some open source implementations of providers that you can use i
 * Mailjet: https://github.com/enkelmedia/NewsletterStudio.Plugins.Mailjet
 * More come, if you have a provider that you want to share - let us know
 
-The Email Service Provider needs to be configred in the Administration-section for each [Workspace](../concepts/workspaces.md).
+The Email Service Provider needs to be configured in the Administration-section for each [Workspace](../concepts/workspaces.md).
 
 
 ## Custom Email Service Provider
