@@ -54,7 +54,7 @@ public class SendTransactionalController : Controller
         model.ConfirmationLink = "https://www.lorem-ipsum.se/confirm/dsdff947kjdfg92mkfsd92";
 
         _newsletterStudioService.SendTransactional(
-            SendTransactionalEmailRequest.Create()
+            SendTransactionalEmailRequest.Create(model)
                 .SendTo(model.Email)
                 .WithSubject("Hallo")
                 .Build()
