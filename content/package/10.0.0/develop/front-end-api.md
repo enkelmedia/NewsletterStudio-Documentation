@@ -11,7 +11,7 @@ With this you can for example:
 * Subscribe recipients to mailing lists
 * Unsubscribe recipients
 
-Just use the built-in IOC-container to get an instance of the interface by injecting it as a dependency in the constructor of your controller or use any of the service locators like `DependencyResolver.Current` for MVC.
+Just use the built-in IOC-container to get an instance of the interface by injecting it as a dependency in the constructor of your controller.
 
 ## Adding a recipient programmatically
 The package ships with a simple macro to add a recipient to a list, you can find this in:
