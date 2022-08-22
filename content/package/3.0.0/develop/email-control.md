@@ -134,11 +134,11 @@ public class CustomNewsletterStudioComposer : IUserComposer
 {
     public void Compose(Composition composition)
     {
-        composition.NewsletterStudio().EmailControlTypes.Append<CustomHtmlEmailControlType>();
+        builder.NewsletterStudio().EmailControlTypes.Append<CustomHtmlEmailControlType>();
 
-        // or 
+        // or
 
-        composition.NewsletterStudio().EmailControlTypes.InsertBefore<ButtonEmailControlType,CustomHtmlEmailControlType>();
+        builder.NewsletterStudio().EmailControlTypes.InsertBefore<ImageEmailControlType,CustomHtmlEmailControlType>();
     }
 }
 ```
@@ -177,23 +177,10 @@ Also, we need to create the html-views for the rendering and edit in the backoff
 
 And finally, we need to render the cshtml-files for the control, there are several ways to create the cshtml-file to be rendered inside the email.
 
-**Quick and Dirty**
+**Render the view**
+The rendering inside the email is done by a razor-view that is based on the Email Control Alias in this case `customhtml.cshtml`. If you're using a custom [Themes](../concepts/themes.md) you can put the `Themes/{YourTheme}/Views/Controls/`-folder but if you don't use a custom Theme and only want to provide the rendering you can put the file in the "magic" override-folder `App_Plugins/NewsletterStudioExtensions/Views/Controls`. Any view in this folder will overwrite the rendering in the Default-Theme.
 
-Just put your view file inside our core Newsletter Studio-folder: `/App_Plugins/NewsletterStudio/Themes/Default/Views/Controls/customhtml.cshtml`. This is not the recommended way as this file might get lost during upgrades.
-
-The recommended way is to create a custom Theme and place the view inside the theme. Create a folder for the theme:
-`/App_Plugins/NewsletterStudioCustom/NewsletterStudio/Themes/CustomTheme/`
-
-Inside this folder, place a file called `themes.json` with the following content:
-```javascript
-{
-  "name": "Custom Theme"
-}
-```
-This will create a theme called "Custom Theme" that will inherit all it's settings from the "Default Theme" but it will act as a placeholder for our cshtml view.
-
-Create the folder for the view: 
-`/App_Plugins/NewsletterStudioCustom/NewsletterStudio/Themes/CustomTheme/Views/Controls/` and create the file `CustomHtml.cshtml` inside this view with the following content:
+Add the following folder: `App_Plugins/NewsletterStudioExtensions/Views/Control` and put the `customhtml.cshtml` file in this folder. Add the following content to the file:
 
 ```html
 @inherits NewsletterStudio.Web.Rendering.TemplateBase.RazorTemplateFolderHost<NewsletterStudio.Core.Rendering.ViewModels.ControlWithEmailViewModel>
@@ -207,10 +194,6 @@ Create the folder for the view:
     @Html.Raw(customHtml.Html)
 }
 ```
-
-**NOTE:** When the package move into stable release there will be a solution to this so that we can create a cshtml-file in a folder outside the package, but that does not force the creation of a custom theme. From Beta7 onwards it's possible to create a shared view without having to create a Theme.
-
-Add the following folder: `App_Plugins/NewsletterStudioExtensions/Views/Control` and put the `customhtml.cshtml` file in this folder. This will be used no matter what theme is currently in use. To override the controls rendering for a given theme, see the instructions for how to work with [Themes](../concepts/themes.md).
 
 The new control icon should now appear in the toolbox in the backoffice. And you should be able to drag it into the content of the email.
 
