@@ -81,5 +81,5 @@ public class MySiteComposer : IComposer {
 }
 ```
 
-**Remember** to also active the Merge Field Provider in the Workspace-settings (Administration -> Workspace -> Manage)
+**Remember** to also activate the Merge Field Provider in the Workspace-settings (Administration -> Workspace -> Manage)
 
