@@ -118,5 +118,28 @@ Create the file:
 
 This view will now be used for all email rendering when "My Theme" is used.
 
-**TODO:**
-* [ ] Fonts (custom fonts?)
+## Custom Fonts
+It's possible to manipulate the list of fonts that we show in the drop downs and use in your emails. Be aware that while it's possible to render the needed CSS for a custom font not all email client will support them. One example is Microsoft Outlook that does not support custom fonts and it will not respect any fallback fonts. For example when setting the style `font-family: CustomFont, Arial;` Outlook will ignore the CustomFont but it will not fallback to Arial but to the default font configured in Outlook.
+
+If you still want to use a custom font, this is how to configure the dropdown to include your custom font:
+
+```csharp
+ public  sealed class SiteComposer : IComposer
+{
+    public void Compose(IUmbracoBuilder builder)
+    {
+        NewsletterStudio.Core.Editor.FontsCollection.All.Add(new FontDefinitionGroup()
+        {
+            Title = "Custom Fonts",
+            Definitions = new List<FontDefinition>()
+            {
+                new FontDefinition() {
+                    DisplayName = "SFProDisplay",
+                    FontFamilyValue = "SFProDisplay",
+                    CustomFontDeclarationCss = "@font-face { font-family: 'SFProDisplay'; src: url('https://www.mysite.com/fonts/SFProDisplay-Bold.woff2') format('woff'); font-weight: normal; font-style: normal; }"
+                }
+            }
+        });
+    }
+}
+```

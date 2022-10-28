@@ -52,25 +52,7 @@ It's also possible to provide a fallback if the merge field is not found, `{{age
 The list of fonts is populated with the most common standard fonts and a list of web fonts from Google. Not all email clients support web fonts, so it's recommended to use any of the standard fonts.
 
 ### Adding fonts
-It's possible to manipulate the list of fonts that we show.
+The font-list is populated with some common fonts but it's also possible to extend this list. See the [Themes](themes.md)-section for more details.
 
-```csharp
- public  sealed class SiteComposer : IComposer
-{
-    public void Compose(IUmbracoBuilder builder)
-    {
-        NewsletterStudio.Core.Editor.FontsCollection.All.Add(new FontDefinitionGroup()
-        {
-            Title = "Custom Fonts",
-            Definitions = new List<FontDefinition>()
-            {
-                new FontDefinition() {
-                    DisplayName = "SFProDisplay",
-                    FontFamilyValue = "SFProDisplay",
-                    CustomFontDeclarationCss = "@font-face { font-family: 'SFProDisplay'; src: url('https://www.mysite.com/fonts/SFProDisplay-Bold.woff2') format('woff'); font-weight: normal; font-style: normal; }"
-                }
-            }
-        });
-    }
-}
-```
+
+
