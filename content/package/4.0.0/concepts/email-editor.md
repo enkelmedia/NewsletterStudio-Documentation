@@ -52,4 +52,4 @@ It's also possible to provide a fallback if the merge field is not found, `{{age
 The list of fonts is populated with the most common standard fonts and a list of web fonts from Google. Not all email clients support web fonts, so it's recommended to use any of the standard fonts.
 
 ### Adding fonts
-The font-list is populated with some common fonts but it's also possible to extend this list. See the [Themes](themes.md)-section for more details.
+The font-list is populated with some common fonts but it's also possible to extend this list. See the [Themes](../concepts/themes.md)-section for more details.
