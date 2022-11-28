@@ -17,7 +17,7 @@ Administrators can download and install the license via the backoffice. This wil
 
 ## Manually installing the license
 
-If you did configure the license during the checkout process, you need to download the `newsletterStudio.lic` file from this site. After this just place the file inside the `/umbraco/Licenses`-folder at the root of your project.
+If you did configure the license during the checkout process, you can download the `newsletterStudio.lic` file from [your license-list](/account/). After this just place the file inside the `/umbraco/Licenses`-folder at the root of your project.
 
 ```
 /umbraco/Licenses

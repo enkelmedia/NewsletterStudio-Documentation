@@ -22,9 +22,9 @@ To create a new theme you first need a folder inside App_Plugins, let's use "MyS
 
 `App_Plugins/MySite/NewsletterStudio/Themes/MyTheme`
 
-We will look at each folder in "App_Plugins" and look for a subfolder called "NewsletterStudio". So basically a wildcard search like this:
+Newsletter Studio will scan each folder in "App_Plugins" and look for a subfolder called "NewsletterStudio". So basically a wildcard search like this:
 
-`App_Plguins/*/NewsletterStudio/Themes/*`
+`App_Plugins/*/NewsletterStudio/Themes/*`
 
 Inside the "MyTheme"-folder we need to create the file "theme.json" to declare our theme. Custom themes only override settings from the default theme, so the minimum content of this file would be:
 
@@ -90,7 +90,7 @@ It's possible to override:
 * The main "email.csthml" file which renders the "framework" for the email
 * Individual view for each [Email Control](../develop/email-control.md).
 
-If you need to override one or more of them just mimic the folder structure inside the global `NewsletterStudioExtensions`-folder or inside the NewsletterStudioExtensions-folder or inside your custom theme folder.
+If you need to override one or more of them just mimic the folder structure inside the global `NewsletterStudioExtensions`-folder or inside the NewsletterStudio-folder or inside your custom theme folder.
 
 ### Global override
 A global override would be used for all themes and basically override the default view. Create a `NewsletterStudioExtensions`-folder in the `App_Plugin`-folder and create a view folder inside this: 

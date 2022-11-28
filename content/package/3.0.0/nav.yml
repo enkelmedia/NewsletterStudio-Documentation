@@ -32,6 +32,8 @@
       link: /develop/signup-form/
     - title: Email Control
       link: /develop/email-control/
+    - title: Macro
+      link: /develop/macro/
     - title: Email Service Providers
       link: /develop/email-service-providers/
     - title: Recipient List Providers
