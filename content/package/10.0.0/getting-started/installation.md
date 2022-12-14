@@ -8,7 +8,7 @@ The package can be found on [NuGet](https://www.nuget.org/packages/NewsletterStu
 Just install the package using the Package Manager inside Visual Studio or via the console.
 
 ```xml
-Install-Package NewsletterStudio
+dotnet add package NewsletterStudio
 ```
 
 We host several packages on NuGet:
