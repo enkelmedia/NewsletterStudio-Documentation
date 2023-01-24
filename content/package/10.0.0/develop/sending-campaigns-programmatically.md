@@ -115,4 +115,4 @@ public class CreateBlockBasedCampaign
 }
 ```
 
-I could be a good idea to use the `Duplicate()`-method of the `ICampaignEmailService` to start from a template created in the email editor and adjust email controls if needed.
+It could be a good idea to use the `Duplicate()`-method of the `ICampaignEmailService` to start from a template created in the email editor and adjust email controls if needed.
