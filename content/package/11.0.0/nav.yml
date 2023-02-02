@@ -50,6 +50,8 @@
       link: /develop/debugging/
     - title: Sending programmatically
       link: /develop/sending-campaigns-programmatically/
+    - title: Database tables
+      link: /develop/database-tables/      
 - title: Other
   items:
     - title: Sending from the content section
