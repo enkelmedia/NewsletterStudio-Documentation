@@ -77,3 +77,6 @@ This table holds a row for each unique email sent when sending a transactional e
 
 ### nsTrackingTransactionalInteraction
 This table holds the interactions performed by a recipient of a transactional email.
+
+### nsKeyValue
+A key-value store that we use to store random information e.g. about installation.
