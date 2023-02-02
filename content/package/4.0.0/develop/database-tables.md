@@ -24,9 +24,23 @@ Contains the built-in mailing lists for the package.
 
 Stores recipients that are added to any of the built-in mailing lists. If you're sending to Umbraco Members this table does not hold any data about them.
 
+Holds information like:
+
+* Name
+* Email
+* Source
+* Custom fields
+* Create date
+
 ### nsSubscription
 
 A relation table between nsMailingList and nsRecipient, holds information about which recipient is subscribed (or unsubscribed) from which list.
+
+Statuses:
+
+* 0 = Pending (when double opt in is in use)
+* 1 = Subscribed
+* 2 = Unsubscribed
 
 ### nsCampaignEmail
 
@@ -40,6 +54,8 @@ Statuses:
 * 3 = Sent
 * 4 = Error
 
+
+
 ### nsTrackingCampaignEmail
 
 This table acts as a queue when sending a campaign email and also as a log for statistic reports. It will contain unique recipients for the campaign and any bounce information for that recipient. 
@@ -52,7 +68,11 @@ Statuses:
 * 1 = InProgress
 * 2 = Error
 * 3 = Sent
-
+  
+Some of the columns:
+* `errorMessage` = Contains any error if sending to this recipient failed.
+* `externalId` = Could be used by a [Email Service Provider](../develop/email-service-provider.ms) to store a unique id for the message.
+* `statusSeattled` Also used by a Email Service Provider to indicate if the status has been seattled. Some providers might need to run backgroun jobs to check the status from a 3rd party. This column can be used to indicate that the status has been seattled and no more checks is needed.
 
 ### nsTrackingCampaignEmailInteraction
 
