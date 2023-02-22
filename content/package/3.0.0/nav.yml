@@ -48,6 +48,8 @@
       link: /develop/front-end-api/
     - title: Debugging / Issues
       link: /develop/debugging/
+    - title: Sending programmatically
+      link: /develop/sending-campaigns-programmatically/
     - title: Database tables
       link: /develop/database-tables/
 - title: Other
