@@ -18,7 +18,7 @@ The custom class needs to implement `IRecipientListProvider` and needs to be reg
 public class InMemoryRecipientListProvider : IRecipientListProvider
 {
     public string DisplayName => "Demo Provider";
-    public string DisplayNameLocalizationKey => "site_demoProvider";
+    public string DisplayNameLocalizationKey => "site/demoProvider";
     public string Prefix => "demo";
     public bool CanRedirectToEdit => false;
 
