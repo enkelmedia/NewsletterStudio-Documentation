@@ -1,12 +1,12 @@
 ---
-title: 11.0.0 Overview
+title: 12.0.0 Overview
 description: Here we'll outline things you need to know to work with Newsletter Studio
 ---
 
 
 # Overview
 
-Newsletter Studio 11 for Umbraco 11
+Newsletter Studio 12 for Umbraco 12
 
 Here we'll outline some of the important basics about Newsletter Studio. Use this as a starting point before reading details about specific features in the package.
 
