@@ -71,7 +71,7 @@ Statuses:
   
 Some of the columns:
 * `errorMessage` = Contains any error if sending to this recipient failed.
-* `externalId` = Could be used by a [Email Service Provider](../develop/email-service-provider.ms) to store a unique id for the message.
+* `externalId` = Could be used by a [Email Service Provider](../develop/email-service-provider.md) to store a unique id for the message.
 * `statusSeattled` Also used by a Email Service Provider to indicate if the status has been seattled. Some providers might need to run backgroun jobs to check the status from a 3rd party. This column can be used to indicate that the status has been seattled and no more checks is needed.
 
 ### nsTrackingCampaignEmailInteraction
