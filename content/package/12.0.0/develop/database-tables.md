@@ -71,7 +71,7 @@ Statuses:
   
 Some of the columns:
 * `errorMessage` = Contains any error if sending to this recipient failed.
-* `externalId` = Could be used by a [Email Service Provider](../develop/email-service-provider.ms) to store a unique id for the message.
+* `externalId` = Could be used by a [Email Service Provider](../develop/email-service-providers.md) to store a unique id for the message.
 * `statusSeattled` Also used by a Email Service Provider to indicate if the status has been seattled. Some providers might need to run backgroun jobs to check the status from a 3rd party. This column can be used to indicate that the status has been seattled and no more checks is needed.
 
 ### nsTrackingCampaignEmailInteraction
@@ -90,7 +90,7 @@ Tracking Types:
 This tables stores all transactional emails with it's content and settings.
 
 ### nsTrackingTransactional
-This tables stores a row each time a transactional email is sent. Since a transactional email can be sent to multiple recipients each recipient is stored in ´nsTrackingTransactionalEmail`
+This tables stores a row each time a transactional email is sent. Since a transactional email can be sent to multiple recipients each recipient is stored in `nsTrackingTransactionalEmail`
 
 ### nsTrackingTransactionalEmail
 This table holds a row for each unique email sent when sending a transactional email.
