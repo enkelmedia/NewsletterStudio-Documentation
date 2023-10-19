@@ -1,20 +1,22 @@
 # Themes
 
-Emails in Newsletter Studio are all based on a theme. The theme contains
+Emails in Newsletter Studio are all based on a theme which contains:
 
 * Default settings for colors, font size, and more.
 * HTML templates (Razor) for rendering the email and controls.
 
-The default theme that is shipped with the package is based on best practices and provides a solid foundation for the rendering.
+The default theme that is shipped with the package is based on best practices and provides a solid foundation for the rendering a HTML-email. Our [contrib-project](https://github.com/enkelmedia/NewsletterStudioContrib/tree/master) contains all the files from the default theme for you to use as a starting point.
 
-You can easily create your own themes to override the default behavior. Themes only need to contain the overrides as we'll fall back on values from the default theme if any setting is not found.
+You can easily create your own themes to override the default behavior. Themes only need to contain the overrides you need to make since the package will fallback on values from the default theme if any setting or views are not present in a custom theme.
 
 ## How to create a Theme
-To create a new theme you first need a folder inside App_Plugins, let's use "MySite" as an example, and let's call the theme "MyTheme", the folder can be named whatever suits your project. We need to create folders with the following structure:
+To create a new theme you first need your own folder inside App_Plugins, let's use "MySitePlugins" as an example, and let's call the theme "MyTheme", the folder can be named whatever suits your project. We need to create folders with the following structure:
 
-`App_Plugins/MySite/NewsletterStudio/Themes/MyTheme`
+`App_Plugins/MySitePlugins/NewsletterStudio/Themes/MyTheme`
 
-Newsletter Studio will scan each folder in "App_Plugins" and look for a subfolder called "NewsletterStudio". So basically a wildcard search like this:
+Notice here that the extentions for Newlsetter Studio should go in a folder called "NewsletterStudio" inside your custom folder in `App_Plugins`. Never try to put your custom code inside `App_Plugins/NewsletterStudio` as this folder might be removed/cleaned/re-populated during build.
+
+Newsletter Studio will scan each subfolder in "App_Plugins" and look for a folder called "NewsletterStudio". So basically a wildcard search like this:
 
 `App_Plugins/*/NewsletterStudio/Themes/*`
 
@@ -74,7 +76,7 @@ All other properties would be fetched from the default theme.json file that look
 ```
 
 ## Overriding rendering views (cshtml)
-There are two ways to override the rendering of the email. A good starting point is to look at the [views from the default theme](https://github.com/enkelmedia/NewsletterStudioContrib/tree/master/Newsletter%20Studio%20V11/Default-Theme). 
+There are two ways to override the rendering of the email. A good starting point is to look at the [views from the default theme](https://github.com/enkelmedia/NewsletterStudioContrib/tree/master/Newsletter%20Studio%20V12/Default-Theme). 
 
 It's possible to override:
 * The main "email.csthml" file which renders the "framework" for the email
@@ -83,16 +85,20 @@ It's possible to override:
 If you need to override one or more of them just mimic the folder structure inside the global `NewsletterStudioExtensions`-folder or inside the NewsletterStudio-folder or inside your custom theme folder.
 
 ### Global override
-A global override would be used for all themes and basically override the default view. Create a `NewsletterStudioExtensions`-folder in the `App_Plugin`-folder and create a view folder inside this: 
+A global override would be used for all themes and basically override the default view. Create a new folder called `NewsletterStudioExtensions` in the `App_Plugin`-folder and create a view-folder inside this: 
 
 `App_Plugins/NewsletterStudioExtensions/Views/`
 
-Inside here, place the cshtml-files that you want to override.
+Inside here, place the cshtml-files that you want to override, for example:
+
+`App_Plugins/NewsletterStudioExtensions/Views/email.cshtml`
+`App_Plugins/NewsletterStudioExtensions/Views/unsubscribe.cshtml`
+`App_Plugins/NewsletterStudioExtensions/Views/Controls/button.cshtml`
 
 ### Theme-specific overrides
 For a theme-specific override just create the view folder inside your theme, ie:
 
-`App_Plugins/MySite/NewsletterStudio/Themes/MyTheme/Views/`
+`App_Plugins/MySitePlugins/NewsletterStudio/Themes/MyTheme/Views/`
 
 Inside here, place the cshtml-files that you want to override.
 
@@ -104,7 +110,7 @@ Update the content to reflect what you need, this file will now be used for all 
 
 ### Example 2: Theme-specific override for button-view
 Create the file:
-`App_Plugins/MySite/NewsletterStudio/Themes/MyTheme/Views/Controls/button.cshtml`
+`App_Plugins/MySitePlugins/NewsletterStudio/Themes/MyTheme/Views/Controls/button.cshtml`
 
 This view will now be used for all email rendering when "My Theme" is used.
 
@@ -112,7 +118,6 @@ This view will now be used for all email rendering when "My Theme" is used.
 It's possible to manipulate the list of fonts that we show in the drop downs and use in your emails. Be aware that while it's possible to render the needed CSS for a custom font not all email client will support them. One example is Microsoft Outlook that does not support custom fonts and it will not respect any fallback fonts. For example when setting the style `font-family: CustomFont, Arial;` Outlook will ignore the CustomFont but it will not fallback to Arial but to the default font configured in Outlook.
 
 If you still want to use a custom font, this is how to configure the dropdown to include your custom font:
-
 ```csharp
  public  sealed class SiteComposer : IComposer
 {
