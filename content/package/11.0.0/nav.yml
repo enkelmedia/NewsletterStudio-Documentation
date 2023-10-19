@@ -56,6 +56,7 @@
   items:
     - title: Sending from the content section
       link: /develop/sending-from-content-section/
-
+    - title: Sending to Umbraco Members
+      link: /other/sending-to-umbraco-members/
 
 
