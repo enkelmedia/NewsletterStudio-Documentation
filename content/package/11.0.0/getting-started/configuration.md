@@ -17,7 +17,13 @@ Here you can configure Workspace-level settings for:
 * Custom Fields
 * Providers and Email Editor
 * Site Url
-* Email Service Provider (SMTP and more)
+* Email Service Provider
+  * SMTP
+    * Host and authentication
+    * Security / TLS
+    * Rate Limiting
+  * SMTP Pickup
+  * [Custom Email Service Provider](../develop/email-service-providers.md)
 
 ## Workspace Settings
 
