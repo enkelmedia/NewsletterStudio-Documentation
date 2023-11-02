@@ -15,7 +15,7 @@ These controls are displayed in the toolbox on the right-hand side inside the em
 ## Custom Email Control
 It's possible to create custom Email Controls and use them for both Campaigns and Transactional emails. Follow this guide to create your own control. Our example is a control that allows for custom HTML to be pasted into the email using a text area, but the possibilities are endless. 
 
-Start by creating a new folder inside the "App_Plugins"-folder of your project, let's call it `NewsletterStudioCustom` (or whatever you would like.), and inside this a folder called `CustomHtmlEmailControl`.
+Start by creating a new folder inside the "App_Plugins"-folder of your project, let's call it `newsletterStudioCustom` (or whatever you would like.), and inside this a folder called `customHtmlEmailControl`.
 
 Inside the folder create another folder called `Models` and add the CS-filers for the Data Model, View Model, and Control Type to this folder.
 
@@ -60,8 +60,8 @@ public class CustomHtmlEmailControlType : EmailControlTypeBase<CustomHtmlEmailCo
 {
 
     public override string Alias => "customHtml";
-    public override string ViewRender => "/app_plugins/NewsletterStudioCustom/CustomHtmlEmailControl/view.html";
-    public override string ViewEdit => "/app_plugins/NewsletterStudioCustom/CustomHtmlEmailControl/edit.html";
+    public override string ViewRender => "/App_Plugins/newsletterStudioCustom/customHtmlEmailControl/view.html";
+    public override string ViewEdit => "/App_Plugins/newsletterStudioCustom/customHtmlEmailControl/edit.html";
 
     public override string Icon => "icon-code";
     public override string IconSvg { get; }
@@ -143,7 +143,7 @@ public class MySiteComposer : IComposer {
 
 When this is done the Email Control Type should show up in the toolbox, otherwise, you might need to go to "Administration -> (Workspace)" and configure the Allowed Email Controls. 
 
-We also need to add translations for our email editor so that we get a nice name in the UI. Create the folder `App_Plugins/NewsletterStudioCustom/Lang` and put a file called `en-US.xml` inside this directory. Use the following content:
+We also need to add translations for our email editor so that we get a nice name in the UI. Create the folder `App_Plugins/newsletterStudioCustom/lang` and put a file called `en-US.xml` inside this directory. Use the following content:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
@@ -159,14 +159,14 @@ Note the alias, it's a combination of "control_" and the alias of the Email Cont
 
 Also, we need to create the html-views for the rendering and edit in the backoffice, create these two files as placeholders:
 
-`/App_Plugins/NewsletterStudioCustom/CustomHtmlEmailControl/view.html`
+`/App_Plugins/newsletterStudioCustom/customHtmlEmailControl/view.html`
 ```html
 <div>
     Custom HTML Control, render view
 </div>
 ```
 
-`/App_Plugins/NewsletterStudioCustom/CustomHtmlEmailControl/edit.html`
+`/App_Plugins/newsletterStudioCustom/customHtmlEmailControl/edit.html`
 ```html
 <div>
     Custom HTML Control, edit view
@@ -178,7 +178,7 @@ And finally, we need to render the cshtml-files for the control, there are sever
 **Render the view**
 The rendering inside the email is done by a razor-view that is based on the Email Control Alias in this case `customhtml.cshtml`. If you're using a custom [Themes](../concepts/themes.md) you can put the `Themes/{YourTheme}/Views/Controls/`-folder but if you don't use a custom Theme and only want to provide the rendering you can put the file in the "magic" override-folder `App_Plugins/NewsletterStudioExtensions/Views/Controls`. Any view in this folder will overwrite the rendering in the Default-Theme.
 
-Add the following folder: `App_Plugins/NewsletterStudioExtensions/Views/Control` and put the `customhtml.cshtml` file in this folder. Add the following content to the file:
+Add the following folder: `App_Plugins/newsletterStudioExtensions/views/control` and put the `customhtml.cshtml` file in this folder. Add the following content to the file:
 
 ```html
 @inherits NewsletterStudio.Web.Rendering.TemplateBase.RazorTemplateFolderHost<NewsletterStudio.Core.Rendering.ViewModels.ControlWithEmailViewModel>
@@ -232,7 +232,7 @@ We also need to tell Umbraco to load this file into the backoffice, create a `pa
 ```javascript
 {
   "javascript": [
-    "/App_Plugins/NewsletterStudioCustom/CustomHtmlEmailControl/edit.controller.js"
+    "/App_Plugins/newsletterStudioCustom/customHtmlEmailControl/edit.controller.js"
   ]
 }
 ```

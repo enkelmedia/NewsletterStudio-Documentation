@@ -13,12 +13,12 @@ Macros can be created in two ways, either as a Global or as a Theme Specific.
 ### Global
 When you want a Macro to be usable everywhere in the email editor, just add a cshtml-file like this:
 
-`App_Plugins/NewsletterStudioExtensions/Views/Macro/MyNewMacro.cshtml`
+`App_Plugins/newsletterStudioExtensions/views/macros/myNewMacro.cshtml`
 
 ### Theme-specific
 A theme-specific Macro only works when this theme is used. To create a Theme-specific macro add a file like this:
 
-`App_Plugins/MySite/NewsletterStudio/Themes/MyTheme/Views/Macro/MyNewMacro.cshtml`
+`App_Plugins/mySite/newsletterStudio/themes/myTheme/views/macros/myNewMacro.cshtml`
 
 ## Example of Macro-content
 

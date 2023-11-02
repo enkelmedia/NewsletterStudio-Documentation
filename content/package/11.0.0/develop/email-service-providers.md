@@ -1,6 +1,6 @@
 ---
-title: Recipients
-description: Documentation about Recipients inside Newsletter Studio
+title: Custom Email Service Provider
+description: Documentation about Email Service Providers inside Newsletter Studio
 ---
 # Email Service Providers
 The actual work of dispatching/sending an email is performed by an **Email Service Provider** (implements `IEmailServiceProvider`). The core consists of two providers at the moment:
@@ -15,17 +15,16 @@ We also provide some open source implementations of providers that you can use i
 
 The Email Service Provider needs to be configured in the Administration-section for each [Workspace](../concepts/workspaces.md).
 
-
 ## Custom Email Service Provider
-
 
 ```csharp
 public class CoolEmailCompanyEmailServiceProvider : IEmailServiceProvider
 {
     public string Alias => "coolEmail";
     public string DisplayName => "Cool Email";
-    public string SettingsView => "~/App_Plugins/CoolEmail/settings.html";
+    public string SettingsView => "~/App_Plugins/coolEmail/settings.html";
     public Dictionary<string, object> Settings { get; set; }
+    
     public SendOutConfiguration GetSendOutConfiguration()
     {
         throw new NotImplementedException();
@@ -59,3 +58,7 @@ public class MySiteComposer : IComposer {
     }
 }
 ```
+
+Then, in the Workspace administration, the new provider should show up here:
+
+![Configure custom provider](/media/administration--allow-email-service-provider.png)

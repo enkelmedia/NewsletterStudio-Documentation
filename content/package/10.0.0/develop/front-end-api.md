@@ -14,10 +14,10 @@ With this you can for example:
 Just use the built-in IOC-container to get an instance of the interface by injecting it as a dependency in the constructor of your controller.
 
 ## Adding a recipient programmatically
-The package ships with a simple macro to add a recipient to a list, you can find this in:
+The package ships with a simple macro to add a recipient to a list, during the installation we will create this view here:
 
-```xml
-\App_Plugins\NewsletterStudio\Views\MacroPartials\NewsletterStudioSignup.cshtml
+```
+\Views\MacroPartials\NewsletterStudioSignup.cshtml
 ```
 
 This showcases a simple way to add a recipient from the front end of your site, if you need to do this in your own controller, here is an example:
@@ -95,7 +95,7 @@ First, configure the "Unsubscribe confirmation url" in the `Settings` under the 
 
 When this is configured we'll route recipients that want to unsubscribe to this page and append a token to the URL.
 
-```json
+```
 https://www.mypage.com/custom-unsubscribe?token=acb123.....
 ```
 
