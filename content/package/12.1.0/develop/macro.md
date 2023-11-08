@@ -22,7 +22,7 @@ A theme-specific Macro only works when this theme is used. To create a Theme-spe
 
 ## Example of Macro-content
 
-```html
+```cshtml
 @model NewsletterStudio.Core.Editor.Controls.Macro.EmailMacroViewModel
 
 <p>Demo cshtml-Macro Rendering</p>
@@ -48,14 +48,29 @@ Has Model: @(Model.TransactionalModel == null ? "No" : "Yes")
     <text>Model Type: @Model.TransactionalModel.GetType() </text>
 }
 
-@*
-Example of how to look for a given Transactional Model if the macro needs to read data from the model
+@* Example of how to look for a given Transactional Model if the macro needs to read data from the model *@
 
 @if (Model.TransactionalModel is ForgotPasswordModel data)
 {
     <p>Data from model: @data.Data.Name</p>
 }
-*@
-
-
 ```
+
+## Injecting dependencies
+Views inside a macro supports injecting dependencies using `@inject`, just like any other razor-view. Here is an example of how to access the UmbracoContext from within a macro:
+
+```cshtml
+@using Umbraco.Cms.Core.Web
+@inject IUmbracoContextFactory UmbracoContextFactory
+@{
+    var pageName = "";
+    using (var ctx = UmbracoContextFactory.EnsureUmbracoContext())
+    {
+        pageName = ctx.UmbracoContext.Content.GetById(1057).Name;
+    }
+}
+
+<h2>@pageName</h2>
+```
+
+**Be aware:** Do not use accessors like `IUmbracoContextAccessor` or `IHttpContextAccessor` inside macros as they are rendered in a background thread during send out. Make sure to send your campaigns/transactional emails to a test SMTP-server or SMTP Pickup Directory to make sure that rendering works as expected. Do not rely on previews as they are rendered by a HTTP-request hence might have access to dependencies that are not accessible in a background-thread.
