@@ -6,10 +6,12 @@ description: Documentation about Merge Field Providers inside Newsletter Studio
 The email editor supports merge fields, that is placeholders for dynamic content that will be replaced during the rendering. This makes it very easy for editors to insert dynamic content inside the editor.
 
 Some of the built in merge fields are:
-* {{email}} - Replaced by the recipients email
-* {{name}} - Replaced by the recipients name
+* {{firstname}} - Replaced by the recipients first name
+* {{lastname}} - Replaced by the recipients last name
 
 Each "Custom Field" on a recipient can also be inserted as a merge field in the email editor.
+
+**Note** that merge fields will not be fully replaced during preview-rendering since the merge fields are dependent on the recipient and there is no recipient during preview. It's recommended to send a real email to a test-recipient to perform a realistic test.
 
 ![Merge field picker inside editor](/media/editor-merge-field-picker.png)
 
