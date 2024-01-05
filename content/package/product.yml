@@ -1,6 +1,9 @@
 name: Newsletter Studio
 current_version: 12.1.0
 version_groups:  
+  - name: Umbraco 13
+    versions:
+    - version: 13.0.0
   - name: Umbraco 12
     versions:
     - version: 12.1.0

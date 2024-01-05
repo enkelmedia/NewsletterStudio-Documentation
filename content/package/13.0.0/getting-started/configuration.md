@@ -37,7 +37,7 @@ Here you can configure
 * Unsubscribe-settings
 
 ## Configuration files
-*Introduced in v11.0.10*
+*Introduced in v13.0.2*
 
 It's also possible to set some settings using `appsettings.json`. This way you can easily adjust settings depending on your environment. For example you can use a certain [Email Service Provider](../develop/email-service-providers.md) for development/testing but ensure that the live-configuration is applied in production.
 
@@ -106,7 +106,7 @@ You can remove the `Workspace.Key`-property to make the settings apply to all wo
 Changes to configuration files will be applied after a application restart. When using these configuration files, configured settings are no longer editable in the UI of the backoffice.
 
 ## Configuration using code
-*Introduced in v11.0.10*
+*Introduced in v13.0.2*
 
 It is also possible to provide the configuration using code by implementing `INewsletterStudioOptionsAccessor` and returning an instance of `NewsletterStudioOptions`. The default implementation of this interface is the class `NewsletterStudioOptionsAccessor` is a singleton that just reads the appsettings but you could replace this with your own implementaiton if needed.
 

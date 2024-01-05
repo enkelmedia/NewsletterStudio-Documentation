@@ -35,3 +35,57 @@ Here you can configure
 * Tracking settings for Google Analytics (UTM)
 * Double opt in-settings
 * Unsubscribe-settings
+
+## Configuration files
+*Introduced in v3.0.14*
+
+Version 3 of the package only exposes a small subset of file based configuration options to be configured in `web.config`.
+
+Here is a samle configuration:
+
+```xml
+<appSettings>
+  <add key="NewsletterStudio:CampaignContentTypes" value="exampleContentTypeAlias,anotherContentTypeAlias" />
+  <add key="NewsletterStudio:Debug:LogCampaignLinks" value="true" />
+  <add key="NewsletterStudio:Debug:DebugFilesPath" value="c:\\temp\\debug\\" />
+</appSettings>
+```
+
+You can also provide overrides for things like `Email Service Provider` and `Workspace Base URL` but in version 3 this requires some custom code. A potential solution is to have a environment-setting in `web.config` and then use this to return different values depending on the environment using a custom `INewsletterStudioOptionsAccessor`-implementaiton.
+
+## Configuration using code
+*Introduced in v3.0.14*
+
+It is also possible to provide the configuration using code by implementing `INewsletterStudioOptionsAccessor` and returning an instance of `NewsletterStudioOptions`. The default implementation of this interface is the class `NewsletterStudioOptionsAccessor` is a singleton that just reads some of the settings in `web.config` but you could replace this with your own implementaiton if needed.
+
+Here is a simple sample:
+
+```csharp
+public class SiteComposer : IUserComposer
+{
+    public void Compose(Composition composition)
+    {
+        composition.Register<INewsletterStudioOptionsAccessor,SiteNewsletterStudioOptionsAccessor>(Lifetime.Singleton);
+    }
+}
+
+public class SiteNewsletterStudioOptionsAccessor : INewsletterStudioOptionsAccessor
+{
+    private readonly NewsletterStudioOptions _options;
+
+    public SiteNewsletterStudioOptionsAccessor()
+    {
+        _options = new NewsletterStudioOptions();
+        _options.Workspaces = new List<NewsletterStudioWorkspaceOptions>()
+        {
+            new NewsletterStudioWorkspaceOptions()
+            {
+                BaseUrl = "http://www.foobar.com",
+            }
+        };
+
+    }
+
+    public NewsletterStudioOptions Value => _options;
+}
+```

@@ -29,3 +29,4 @@ Here you can configure
 * Tracking settings for Google Analytics (UTM)
 * Double opt in-settings
 * Unsubscribe-settings
+
