@@ -35,6 +35,7 @@ Here you can configure
 * Tracking settings for Google Analytics (UTM)
 * Double opt in-settings
 * Unsubscribe-settings
+* Settings for List-Unsubscribe headers.
 
 ## Configuration files
 *Introduced in v10.0.9*
