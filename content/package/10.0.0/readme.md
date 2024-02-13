@@ -13,6 +13,8 @@ Here we'll outline some of the important basics about Newsletter Studio. Use thi
 # Versions
 If you're looking for documentation for a specific version of the package, these links might be useful.
 
+* [Newlsetter Studio 13 for Umbraco 13](../package/13.0.0/)
+* [Newlsetter Studio 12 for Umbraco 12](../package/12.1.0/)
 * [Newlsetter Studio 11 for Umbraco 11](../package/11.0.0/)
 * [Newlsetter Studio 10 for Umbraco 10](../package/10.0.0/)
 * [Newlsetter Studio 4 for Umbraco 9](../package/4.0.0/)
