@@ -5,7 +5,7 @@ description: Documentation about macros inside Newsletter Studio
 # Email Control: Macro
 The Macro-control makes it possible to include dynamic content, generated with a `cshtml` file, in both Campaign and Transactional Emails.
 
-This can be used to generate recipient-specific content like discounts, promotions, personalized content or render a recipit. When using a Macro you have 100% control over the rendered HTML.
+This can be used to generate recipient-specific content like discounts, promotions, personalized content or render a receipt. When using a Macro you have 100% control over the rendered HTML.
 
 ## Creating a Macro
 Macros can be created in two ways, either as a Global or as a Theme Specific.
