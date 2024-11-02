@@ -52,6 +52,7 @@ Here is a samle configuration:
 ```json
 {
   "NewsletterStudio" : {
+    "CampaignContentTypes" : "newsArticle",
     "Workspaces" : [
       {
         "Key" : "<your guid workspace key>",
