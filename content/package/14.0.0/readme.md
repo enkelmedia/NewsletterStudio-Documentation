@@ -1,18 +1,19 @@
 ---
-title: 13.0.0 Overview
+title: 14.0.0 Overview
 description: Here we'll outline things you need to know to work with Newsletter Studio
 ---
 
 
 # Overview
 
-Newsletter Studio 13 for Umbraco 13
+Newsletter Studio 14 for Umbraco 14
 
 Here we'll outline some of the important basics about Newsletter Studio. Use this as a starting point before reading details about specific features in the package.
 
 # Versions
 If you're looking for documentation for a specific version of the package, these links might be useful.
 
+* [Newlsetter Studio 14 for Umbraco 13](../package/14.0.0/)
 * [Newlsetter Studio 13 for Umbraco 13](../package/13.0.0/)
 * [Newlsetter Studio 12 for Umbraco 12](../package/12.1.0/)
 * [Newlsetter Studio 11 for Umbraco 11](../package/11.0.0/)

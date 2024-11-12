@@ -28,12 +28,13 @@ public class InMemoryRecipientListProvider : IRecipientListProvider
 
     public string DisplayName => "Demo Provider";
 
-    public string DisplayNameLocalizationKey => "site/demoProvider";
+    /// <summary>
+    /// This can be either a localization key (requires client side localization key to exist) or just a display name.
+    /// </summary>
+    public string DisplayNameLocalizationKey => "site_demoProvider";
 
     public string Prefix => "ex";
-
-    public bool CanRedirectToEdit => false;
-
+    
     public InMemoryRecipientListProvider(IUmbracoContextFactory umbracoContextFactory)
     {
         // You can inject dependencies in the constructor if needed.
@@ -165,11 +166,20 @@ public class InMemoryRecipientListProvider : IRecipientListProvider
         return true;
     }
 
-    public string GetEditUrl(EmailReceiverIdentifier receiverId)
+    /// <summary>
+    /// Should return information on how to open details for the recipient.
+    /// Could be a link to another part of the Umbraco backoffice or external link
+    /// </summary>
+    /// <param name="receiverId"></param>
+    /// <returns></returns>
+    public RecipientEditInformation? GetEditInformation(EmailReceiverIdentifier receiverId)
     {
-        // Used when CanRedirectToEdit is true to allow for redirection to a edit-view. 
-        // Ig. the Umbraco Member-view for Umbraco members.
-        throw new NotImplementedException();
+        return new RecipientEditInformation()
+        {
+            Type = RecipientEditInformationType.Link,
+            OpenInNewWindow = true,
+            Url = "https://www.newsletterstudio.org"
+        };
     }
 }
 
