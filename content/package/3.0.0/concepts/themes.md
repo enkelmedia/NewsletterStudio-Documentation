@@ -14,7 +14,7 @@ To create a new theme you first need your own folder inside App_Plugins, let's u
 
 `App_Plugins/MySitePlugins/NewsletterStudio/Themes/MyTheme`
 
-Notice here that the extentions for Newlsetter Studio should go in a folder called "NewsletterStudio" inside your custom folder in `App_Plugins`. Never try to put your custom code inside `App_Plugins/NewsletterStudio` as this folder might be removed/cleaned/re-populated during build.
+Notice here that the extentions for Newsletter Studio should go in a folder called "NewsletterStudio" inside your custom folder in `App_Plugins`. Never try to put your custom code inside `App_Plugins/NewsletterStudio` as this folder might be removed/cleaned/re-populated during build.
 
 Newsletter Studio will scan each subfolder in "App_Plugins" and look for a folder called "NewsletterStudio". So basically a wildcard search like this:
 
