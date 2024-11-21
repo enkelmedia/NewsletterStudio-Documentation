@@ -22,7 +22,7 @@ Start by creating a this folder inside your Umbraco-project: `Extensions/EmailEd
 ## The Data Model
 This model contains the data that your control must store, which could be raw HTML (as for the Rick Text-control) or image-urls, links, etc. Each time the control is used inside an email this model will be used to serialize and store the data.
 
-In the model's folder, create a class called `HelloEmailControlData.cs`
+Create a file called `HelloEmailControlData.cs` with the following content:
 
 ```csharp
 {% contrib file="V14/Extensions-Demos/Demo.Web/Extensions/EmailEditorControl/HelloEmailControlData.cs" %}
@@ -32,7 +32,7 @@ In the model's folder, create a class called `HelloEmailControlData.cs`
 ## The View Model
 The view model is used when the Razor-engine renders the email, this is what will get passed down to the cshtml-view when the actual email is rendered.
 
-In the model's folder, create a class called `HelloEmailControlViewModel.cs`
+In the same folder, create a file called `HelloEmailControlViewModel.cs`:
 
 ```csharp
 {% contrib file="V14/Extensions-Demos/Demo.Web/Extensions/EmailEditorControl/HelloEmailControlViewModel.cs" %}
@@ -42,7 +42,7 @@ In the model's folder, create a class called `HelloEmailControlViewModel.cs`
 ## The Control Type
 The Control Type is the main definition for the Email Control, this class is responsible for processing data and also holds important meta-data about the Email Control (like alias, icon, etc.).
 
-In the model's folder, create a class called `HelloEmailControlType.cs`
+Create a file called `HelloEmailControlType.cs`:
 
 ```csharp
 {% contrib file="V14/Extensions-Demos/Demo.Web/Extensions/EmailEditorControl/HelloEmailControlType.cs" %}
