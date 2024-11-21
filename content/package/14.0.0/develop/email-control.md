@@ -15,7 +15,7 @@ These controls are displayed in the toolbox on the right-hand side inside the em
 ## Custom Email Control
 It's possible to create custom Email Controls and use them for both Campaigns and Transactional emails. Follow this guide to create your own control. Our example is a control that allows for custom Hello-message to be pasted into the email using a text area, but the possibilities are endless. 
 
-This guide will build a custom control, the full source can be found in the [Newsletter Studio Contrib-project](https://github.com/enkelmedia/NewsletterStudioContrib) on Github.
+This guide will build a custom control, the full source can be found in the [Newsletter Studio Contrib-project](https://github.com/enkelmedia/NewsletterStudioContrib/tree/master/Newsletter%20Studio%20V14/Extensions-Demos) on Github.
 
 Start by creating a this folder inside your Umbraco-project: `Extensions/EmailEditorControl`, inside this folder we need to create some C#-files for our custom control. 
 
@@ -61,7 +61,7 @@ When this is done the Email Control Type should show up in the email editor tool
 
 ## Creating the backoffice experience
 
-At this point you need a setup for backoffice extensions. The official [umbraco documentation](https://docs.umbraco.com/umbraco-cms/14.latest/customizing/development-flow) has a guide on how to setup the tools needed. There are plenty of ways to setup a frontend development environment for Umbraco, in this guide we'll use a fairly common approach that includes using TypeScript and Lit. You can have a look at the `Client`-folder of our [the NewsletterStudioContrib](https://github.com/enkelmedia/NewsletterStudioContrib)-project for inspiration.
+At this point you need a setup for backoffice extensions. The official [umbraco documentation](https://docs.umbraco.com/umbraco-cms/14.latest/customizing/development-flow) has a guide on how to setup the tools needed. There are plenty of ways to setup a frontend development environment for Umbraco, in this guide we'll use a fairly common approach that includes using TypeScript and Lit. You can have a look at the `Client`-folder of our [the NewsletterStudioContrib](https://github.com/enkelmedia/NewsletterStudioContrib/tree/master/Newsletter%20Studio%20V14/Extensions-Demos/Demo.Web/Client)-project for inspiration.
 
 From now on we'll assume that you already have the frontend environment setup in the `/Client` folder of the web-project and we'll also assume that you have basic knowledge about extending the backoffice, like registering extensions etc.
 
