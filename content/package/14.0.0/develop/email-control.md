@@ -168,9 +168,9 @@ With all this in place you, should have a working Email Control for working in t
 
 ## Rendering the email content
 
-Finally, we need to create a Razor cshtml-file for that will be used to render the HTML into the emails.
+Finally, we need to create a Razor cshtml-file that will be used to render the HTML in the emails.
 
-To provide a default rendering we recommend that you put the view in the `App_Plugins/NewsletterStudioExtensions/Views/Controls`-folder. However if you have a [Custom theme](../concepts/themes.md), you could also place the view inside your theme.
+To provide a default rendering we recommend that you put the view in the `App_Plugins/NewsletterStudioExtensions/Views/Controls`-folder. However, if you have a [Custom theme](../concepts/themes.md), you could also place the view inside your themes `Views\Controls`-folder.
 
 In the `Controls`-folder, create a file with the same name as your email control type alias, in our case `hello.cshtml`.
 
