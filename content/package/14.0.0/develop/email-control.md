@@ -15,14 +15,14 @@ These controls are displayed in the toolbox on the right-hand side inside the em
 ## Custom Email Control
 It's possible to create custom Email Controls and use them for both Campaigns and Transactional emails. Follow this guide to create your own control. Our example is a control that allows for custom Hello-message to be pasted into the email using a text area, but the possibilities are endless. 
 
-This guide will build a custom control, the full source can be found in the [Newsletter Studio Contrib-project](https://github.com/enkelmedia/NewsletterStudioContrib) on Github.
+This guide will build a custom control, the full source can be found in the [Newsletter Studio Contrib-project](https://github.com/enkelmedia/NewsletterStudioContrib/tree/master/Newsletter%20Studio%20V14/Extensions-Demos) on Github.
 
 Start by creating a this folder inside your Umbraco-project: `Extensions/EmailEditorControl`, inside this folder we need to create some C#-files for our custom control. 
 
 ## The Data Model
 This model contains the data that your control must store, which could be raw HTML (as for the Rick Text-control) or image-urls, links, etc. Each time the control is used inside an email this model will be used to serialize and store the data.
 
-In the model's folder, create a class called `HelloEmailControlData.cs`
+Create a file called `HelloEmailControlData.cs` with the following content:
 
 ```csharp
 {% contrib file="V14/Extensions-Demos/Demo.Web/Extensions/EmailEditorControl/HelloEmailControlData.cs" %}
@@ -32,7 +32,7 @@ In the model's folder, create a class called `HelloEmailControlData.cs`
 ## The View Model
 The view model is used when the Razor-engine renders the email, this is what will get passed down to the cshtml-view when the actual email is rendered.
 
-In the model's folder, create a class called `HelloEmailControlViewModel.cs`
+In the same folder, create a file called `HelloEmailControlViewModel.cs`:
 
 ```csharp
 {% contrib file="V14/Extensions-Demos/Demo.Web/Extensions/EmailEditorControl/HelloEmailControlViewModel.cs" %}
@@ -42,7 +42,7 @@ In the model's folder, create a class called `HelloEmailControlViewModel.cs`
 ## The Control Type
 The Control Type is the main definition for the Email Control, this class is responsible for processing data and also holds important meta-data about the Email Control (like alias, icon, etc.).
 
-In the model's folder, create a class called `HelloEmailControlType.cs`
+Create a file called `HelloEmailControlType.cs`:
 
 ```csharp
 {% contrib file="V14/Extensions-Demos/Demo.Web/Extensions/EmailEditorControl/HelloEmailControlType.cs" %}
@@ -61,7 +61,7 @@ When this is done the Email Control Type should show up in the email editor tool
 
 ## Creating the backoffice experience
 
-At this point you need a setup for backoffice extensions. The official [umbraco documentation](https://docs.umbraco.com/umbraco-cms/14.latest/customizing/development-flow) has a guide on how to setup the tools needed. There are plenty of ways to setup a frontend development environment for Umbraco, in this guide we'll use a fairly common approach that includes using TypeScript and Lit. You can have a look at the `Client`-folder of our [the NewsletterStudioContrib](https://github.com/enkelmedia/NewsletterStudioContrib)-project for inspiration.
+At this point you need a setup for backoffice extensions. The official [umbraco documentation](https://docs.umbraco.com/umbraco-cms/14.latest/customizing/development-flow) has a guide on how to setup the tools needed. There are plenty of ways to setup a frontend development environment for Umbraco, in this guide we'll use a fairly common approach that includes using TypeScript and Lit. You can have a look at the `Client`-folder of our [the NewsletterStudioContrib](https://github.com/enkelmedia/NewsletterStudioContrib/tree/master/Newsletter%20Studio%20V14/Extensions-Demos/Demo.Web/Client)-project for inspiration.
 
 From now on we'll assume that you already have the frontend environment setup in the `/Client` folder of the web-project and we'll also assume that you have basic knowledge about extending the backoffice, like registering extensions etc.
 
@@ -168,9 +168,9 @@ With all this in place you, should have a working Email Control for working in t
 
 ## Rendering the email content
 
-Finally, we need to create a Razor cshtml-file for that will be used to render the HTML into the emails.
+Finally, we need to create a Razor cshtml-file that will be used to render the HTML in the emails.
 
-To provide a default rendering we recommend that you put the view in the `App_Plugins/NewsletterStudioExtensions/Views/Controls`-folder. However if you have a [Custom theme](../concepts/themes.md), you could also place the view inside your theme.
+To provide a default rendering we recommend that you put the view in the `App_Plugins/NewsletterStudioExtensions/Views/Controls`-folder. However, if you have a [Custom theme](../concepts/themes.md), you could also place the view inside your themes `Views\Controls`-folder.
 
 In the `Controls`-folder, create a file with the same name as your email control type alias, in our case `hello.cshtml`.
 
