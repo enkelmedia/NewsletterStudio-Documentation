@@ -44,8 +44,8 @@
       link: /develop/merge-field-providers/
     - title: Render Tasks
       link: /develop/render-tasks/      
-    - title: Events
-      link: /develop/events/
+    - title: Notifications
+      link: /develop/notifications/
     - title: Front end API
       link: /develop/front-end-api/
     - title: Debugging / Issues
