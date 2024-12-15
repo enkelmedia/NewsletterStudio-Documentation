@@ -16,3 +16,21 @@ Newsletter Studio comes with a couple of extension points for the backoffice, he
 * `nsAction` - used to inject actions (like remove, duplicate, export etc) for different entities like nsRecipient, nsMailingList etc.
 * `nsEmailServiceProviderSettingsUi` - optionally used when building a custom [Email Service Provider](../develop/email-service-providers.md).
 
+## Helpful components
+We ship a couple of helpful components that can be used for debugging issues during the development of a extension.
+
+### ns-validation-errors-debugging
+Use this to show validation errors in the current context so understand why a form is not considered valid.
+
+```html
+<ns-validation-errors-debug></ns-validation-errors-debug>
+```
+
+### ns-json-debug
+Used to show a nice pre-element with formatted JSON-data.
+
+```html
+<ns-json-debug .data=${this.myModel}></ns-json-debug>
+```
+
+
