@@ -1,0 +1,67 @@
+- title: Getting Started
+  items:
+    - title: Overview
+      link: /
+    - title: Basics
+      link: /getting-started/basics/
+    - title: Installation
+      link: /getting-started/installation/
+    - title: Configure license
+      link: /getting-started/license/
+    - title: Configuration
+      link: /getting-started/configuration/
+- title: Concepts
+  items:
+    - title: Campaigns
+      link: /concepts/campaigns/
+    - title: Transactional Emails
+      link: /concepts/transactionals/
+    - title: The Email Editor
+      link: /concepts/email-editor/
+    - title: Recipients
+      link: /concepts/recipients/
+    - title: Mailing Lists
+      link: /concepts/mailing-lists/
+    - title: Workspaces
+      link: /concepts/workspaces/
+    - title: Themes
+      link: /concepts/themes/
+- title: Develop
+  items:
+    - title: Signup form
+      link: /develop/signup-form/
+    - title: Email Control
+      link: /develop/email-control/
+    - title: Macro
+      link: /develop/macro/
+    - title: Email Service Providers
+      link: /develop/email-service-providers/
+    - title: SMPT and bounces
+      link: /develop/smtp-sending/      
+    - title: Recipient List Providers
+      link: /develop/recipient-list-providers/
+    - title: Merge Field Providers
+      link: /develop/merge-field-providers/
+    - title: Render Tasks
+      link: /develop/render-tasks/      
+    - title: Notifications
+      link: /develop/notifications/
+    - title: Front end API
+      link: /develop/front-end-api/
+    - title: Debugging / Issues
+      link: /develop/debugging/
+    - title: Sending programmatically
+      link: /develop/sending-campaigns-programmatically/
+    - title: Database tables
+      link: /develop/database-tables/      
+- title: Other
+  items:
+    - title: Sending from the content section
+      link: /develop/sending-from-content-section/
+    - title: Sending to Umbraco Members
+      link: /other/sending-to-umbraco-members/
+    - title: Running on Linux & Mac
+      link: /other/linux-and-mac/
+
+
+

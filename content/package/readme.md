@@ -1,6 +1,8 @@
 ﻿# Newsletter Studio documentation
 Use the links to navigate to the documentation for your version of the package.
 
+* [Newsletter Studio 15 for Umbraco 15](15.0.0/)
+* [Newsletter Studio 14 for Umbraco 14](14.0.0/)
 * [Newsletter Studio 12 for Umbraco 13](13.0.0/)
 * [Newsletter Studio 12 for Umbraco 12](12.1.0/)
 * [Newsletter Studio 11 for Umbraco 11](11.0.0/)
