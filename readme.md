@@ -14,10 +14,8 @@ The URL should start with the current version number and then be relative.
 
 Ex:
 
-```
 {% contrib file="V14/Extensions-Demos/Demo.Web/Extensions/EmailEditorControl/HelloEmailControlType.cs" %}
 {% endcontrib %}
-```
 
 ### Hints
 

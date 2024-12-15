@@ -24,38 +24,30 @@ This model contains the data that your control must store, which could be raw HT
 
 Create a file called `HelloEmailControlData.cs` with the following content:
 
-```csharp
 {% contrib file="V14/Extensions-Demos/Demo.Web/Extensions/EmailEditorControl/HelloEmailControlData.cs" %}
 {% endcontrib %}
-```
 
 ## The View Model
 The view model is used when the Razor-engine renders the email, this is what will get passed down to the cshtml-view when the actual email is rendered.
 
 In the same folder, create a file called `HelloEmailControlViewModel.cs`:
 
-```csharp
 {% contrib file="V14/Extensions-Demos/Demo.Web/Extensions/EmailEditorControl/HelloEmailControlViewModel.cs" %}
 {% endcontrib %}
-```
 
 ## The Control Type
 The Control Type is the main definition for the Email Control, this class is responsible for processing data and also holds important meta-data about the Email Control (like alias, icon, etc.).
 
 Create a file called `HelloEmailControlType.cs`:
 
-```csharp
 {% contrib file="V14/Extensions-Demos/Demo.Web/Extensions/EmailEditorControl/HelloEmailControlType.cs" %}
 {% endcontrib %}
-```
 
 ## Configure the Control Type
 After these classes have been created you need to tell Newsletter Studio about the EmailControlType, create a Composer and append it to the list of ControlTypes.
 
-```csharp
 {% contrib file="V14/Extensions-Demos/Demo.Web/Extensions/EmailEditorControl/HelloEmailControlComposer.cs" %}
 {% endcontrib %}
-```
 
 When this is done the Email Control Type should show up in the email editor toolbox, otherwise, you might need to go to "Administration -> (Workspace)" and configure the "Allowed Email Controls".
 
@@ -71,10 +63,8 @@ First we need to ensure that we have localization entries for our new control, a
 
 This will give a friendly name to our newly created control:
 
-```typescript
 {% contrib file="V14/Extensions-Demos/Demo.Web/Client/src/localization/en-us.ts" %}
 {% endcontrib %}
-```
 
 Note the alias, it's a combination of "ns_control_" and the alias of the Email Control Type. This will ensure that English backoffice users get the right text in the UI, of course, you can use any language you like, this is standard Umbraco localizations.
 
@@ -91,17 +81,13 @@ We now need to add two new extension to handle the visual representation inside 
 
 First, we need to declare a typescript model for the data that our control needs to work with, let's create a file called `demo-email-editor-control-hello.models.ts` with the following content:
 
-```typescript
 {% contrib file="V14/Extensions-Demos/Demo.Web/Client/src/editor-controls/hello/demo-email-editor-control-hello.models.ts" %}
 {% endcontrib %}
-```
 
 Let's start with the edit view, in your project add a file called `demo-email-editor-control-hello-edit.element.ts` with this content:
 
-```typescript
 {% contrib file="V14/Extensions-Demos/Demo.Web/Client/src/editor-controls/hello/demo-email-editor-control-hello-edit.element.ts" %}
 {% endcontrib %}
-```
 
 Register this component as a extension of type `nsEmailControlEditUi`:
 
@@ -143,10 +129,8 @@ The "meta"-property can be used to pass meta-data from the server to the email c
 
 Next, we need to make sure that the preview is rendering the content from the textarea, create a file called `demo-email-editor-control-hello-display.element.ts` that looks like this:
 
-```typescript
 {% contrib file="V14/Extensions-Demos/Demo.Web/Client/src/editor-controls/hello/demo-email-editor-control-hello-display.element.ts" %}
 {% endcontrib %}
-```
 
 We also need to register this extension
 
@@ -174,7 +158,5 @@ To provide a default rendering we recommend that you put the view in the `App_Pl
 
 In the `Controls`-folder, create a file with the same name as your email control type alias, in our case `hello.cshtml`.
 
-```html
 {% contrib file="V14/Extensions-Demos/Demo.Web/App_Plugins/newsletterStudioExtensions/views/controls/hello.cshtml" %}
 {% endcontrib %}
-```
