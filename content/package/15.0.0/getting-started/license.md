@@ -11,9 +11,7 @@ Administrators can download and install the license via the backoffice. This wil
 * Go to the "Email"-section and click the "Administration"-icon in the tree
 * In the dashboard, expand the "Upgrade"-toolbar and use the "Connect and download license"-wizard.
 
-![administration-license](/media/administration-license.png)
-
-
+![administration-license](/media/v15/administration--overview-license.png?width=1380)
 
 ## Manually installing the license
 

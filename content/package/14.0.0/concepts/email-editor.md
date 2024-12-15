@@ -6,7 +6,7 @@ description: Documentation about The Email Editor inside Newsletter Studio
 
 The built-in editor makes the creative process of designing responsive emails for desktop, mobile, and tablets a breeze.
 
-![email-editor--edit](/media/email-editor--edit.png)
+![email-editor--edit](/media/v15/email-editor--edit.png?width=1380)
 
 The main window in the editor contains a design surface to the left and a toolbox to the right. To add new items to the design surface, just drag and drop from the toolbox. Clicking one of the items in the design surface will activate the edit mode for this row or control.
 

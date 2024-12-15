@@ -15,7 +15,7 @@ If a Umbraco installation hosts multiple websites for separate companies or for 
 
 When installing the package a new Workspace is automatically created.
 
-![Screenshot of the Workspace Administration](/media/workspaces-overview.png?width=1380&quality=100)
+![Screenshot of the Workspace Administration](/media/v15/administration--overview.png?width=1380&quality=100)
 
 ## Recipients and mailing lists
 A recipient is stored once per workspace. When adding or importing a new recipient to a mailing list, the recipient is created and a relation between the recipient and the mailing list is also created.
