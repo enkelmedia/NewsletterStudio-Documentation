@@ -13,7 +13,7 @@ The actual content inside the email editor is always contained inside an `Email 
 These controls are displayed in the toolbox on the right-hand side inside the email editor.
 
 ## Custom Email Control
-It's possible to create custom Email Controls and use them for both Campaigns and Transactional emails. Follow this guide to create your own control. Our example is a control that allows for custom Hello-message to be pasted into the email using a text area, but the possibilities are endless. 
+It's possible to create custom Email Controls and use them for both Campaigns and Transactional emails. Follow this guide to create your own control. Our example is a control that allows for custom a Hello-message to be pasted into the email using a text area, but the possibilities are endless. 
 
 This guide will build a custom control, the full source can be found in the [Newsletter Studio Contrib-project](https://github.com/enkelmedia/NewsletterStudioContrib/tree/master/Newsletter%20Studio%20V15/Extensions-Demos) on Github.
 
