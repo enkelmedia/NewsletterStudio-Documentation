@@ -1,7 +1,7 @@
 # Sending from the Content Section
 Newsletter Studio supports sending Umbraco content as campaigns right from the content section via our `Campaigns`-tab. After settings this up, editors can create newsletters that are listed on the website and then with a click of a button send this as a campaign using Newsletter Studio.
 
-![Sending Campaigns from the Content-section](/media/campaign-content-section.png)
+![Sending Campaigns from the Content-section](/media/v15/content-section--overview.png)
 
 This would also allow you to restrict access to the Newsletter Studio-section for non administrators and only give editors access to the tab in the content section.
 
