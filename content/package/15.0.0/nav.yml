@@ -30,6 +30,8 @@
   items:
     - title: Signup form
       link: /develop/signup-form/
+    - title: Backoffice extensions
+      link: /develop/backoffice-extensions/      
     - title: Email Control
       link: /develop/email-control/
     - title: Macro
