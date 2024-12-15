@@ -92,9 +92,7 @@ Let's start with the edit view, in your project add a file called `demo-email-ed
 Register this component as a extension of type `nsEmailControlEditUi`:
 
 ```typescript
-import { ManifestEmailControlEditUi } from '@newsletterstudio/umbraco/extensibility'
-
-const editUi : ManifestEmailControlEditUi = {
+const editUi : UmbExtensionManifest = {
     type: 'nsEmailControlEditUi',
     alias : 'nsEmailControlEditUiHello',
     name : 'NS Email Control Edit Ui Hello',
@@ -127,7 +125,7 @@ The "meta"-property can be used to pass meta-data from the server to the email c
 
 ### Display view
 
-Next, we need to make sure that the preview is rendering the content from the textarea, create a file called `demo-email-editor-control-hello-display.element.ts` that looks like this:
+Next, we need to make sure that the editor display view is rendering the content from the textarea, create a file called `demo-email-editor-control-hello-display.element.ts` that looks like this:
 
 {% contrib file="V15/Extensions-Demos/Demo.Web/Client/src/editor-controls/hello/demo-email-editor-control-hello-display.element.ts" %}
 {% endcontrib %}
@@ -135,9 +133,7 @@ Next, we need to make sure that the preview is rendering the content from the te
 We also need to register this extension
 
 ```typescript
-import { ManifestEmailControlDisplayUi } from '@newsletterstudio/umbraco/extensibility'
-
-const displayUi : ManifestEmailControlDisplayUi = {
+const displayUi : UmbExtensionManifest = {
     type: 'nsEmailControlDisplayUi',
     alias : 'nsEmailControlDisplayUiHello',
     name : 'NS Email Control Display Ui Hello',
@@ -148,13 +144,13 @@ const displayUi : ManifestEmailControlDisplayUi = {
 }
 ```
 
-With all this in place you, should have a working Email Control for working in the email editor.
+With all this in place, we should have a working Email Control for the email editor.
 
 ## Rendering the email content
 
 Finally, we need to create a Razor cshtml-file that will be used to render the HTML in the emails.
 
-To provide a default rendering we recommend that you put the view in the `App_Plugins/NewsletterStudioExtensions/Views/Controls`-folder. However, if you have a [Custom theme](../concepts/themes.md), you could also place the view inside your themes `Views\Controls`-folder.
+To provide a default rendering we recommend that you put the view in the `App_Plugins/newsletterStudioExtensions/Views/Controls`-folder. However, if you have a [Custom theme](../concepts/themes.md), you could also place the view inside your themes `Views\Controls`-folder.
 
 In the `Controls`-folder, create a file with the same name as your email control type alias, in our case `hello.cshtml`.
 
