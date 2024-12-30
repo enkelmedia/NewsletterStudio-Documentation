@@ -30,9 +30,10 @@ Please refer to the [official Umbraco documentation](https://docs.umbraco.com/um
 
 Here's a list of the current events that we're providing, we're working to add more events, feel free to reach out if you're missing something.
 
-| Event                      | Description                                              |
-|----------------------------|----------------------------------------------------------|
-| EmailSendingNotification   | Fired by a [Email Service Provider](./email-service-providers.md) just before a e-mail is sent. The parameter will be the concrete e-mail message type for this provider |
-| TreeRenderingNotification | Fired when the Newsletter Studio-tree has been rendered. Use this to change the menu items in the tree |
 
+#### EmailSendingNotification
+Fired by a [Email Service Provider](./email-service-providers.md) just before a e-mail is sent. The parameter will be the concrete e-mail message type for this provider.
 <hr/>
+
+#### TreeRenderingNotification
+Fired when the Newsletter Studio-tree has been rendered. Use this to change the menu items in the tree
