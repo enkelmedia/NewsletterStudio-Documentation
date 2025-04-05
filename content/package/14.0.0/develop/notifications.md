@@ -32,7 +32,7 @@ Here's a list of the current events that we're providing, we're working to add m
 
 
 #### EmailSendingNotification
-Fired by a [Email Service Provider](./email-service-providers.md) just before a e-mail is sent. The parameter will be the concrete e-mail message type for this provider.
+Fired by a [Email Service Provider](../develop/email-service-providers.md) just before a e-mail is sent. The parameter will be the concrete e-mail message type for this provider.
 <hr/>
 
 #### TreeRenderingNotification

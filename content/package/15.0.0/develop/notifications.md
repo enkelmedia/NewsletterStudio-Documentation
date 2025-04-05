@@ -26,13 +26,13 @@ public class EmailSendingHandler : INotificationHandler<EmailSendingNotification
 }
 ```
 
-Please refer to the [official Umbraco documentation](https://docs.umbraco.com/umbraco-cms/14.latest/fundamentals/code/subscribing-to-notifications) for detailed instructions on how to setup a notification handler.
+Please refer to the [official Umbraco documentation](https://docs.umbraco.com/umbraco-cms/15.latest/fundamentals/code/subscribing-to-notifications) for detailed instructions on how to setup a notification handler.
 
 Here's a list of the current events that we're providing, we're working to add more events, feel free to reach out if you're missing something.
 
 
 #### EmailSendingNotification
-Fired by a [Email Service Provider](./email-service-providers.md) just before a e-mail is sent. The parameter will be the concrete e-mail message type for this provider.
+Fired by a [Email Service Provider](../develop/email-service-providers.md) just before a e-mail is sent. The parameter will be the concrete e-mail message type for this provider.
 <hr/>
 
 #### TreeRenderingNotification
