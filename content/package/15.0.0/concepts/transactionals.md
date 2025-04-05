@@ -3,9 +3,28 @@ title: Transactional Emails
 description: Documentation about Transactional Emails with Newsletter Studio for Umbraco
 ---
 # Transactional Emails
-With the support for Transactional Emails implementers can use our email editor for all kinds of emails that the site needs to send, that could be a "sign up confirmation", "forgot password" or a receipt from a webshop.
+With the support for Transactional Emails, implementers can use our email editor for all kinds of emails that the site needs to send. This could be a "sign up confirmation", "forgot password" or a receipt from a webshop.
 
 ![Screenshot of the Transactional Emails](/media/transactional-list.png?width=1380&quality=100)
+
+## How it works
+
+By defining a model with the `TransactionalEmail` attribute, our editor will pick up any available fields and present them for editors in a simple drop down.
+
+![Screenshot of email editor with fields](/media/v15/transactional-edit-fields.png)
+
+You can also configure the package to track and log any email that has been sent, providing analytics insights and a historic log.
+
+![Screenshot of transactional email log](/media/v15/transactional-log.png)
+
+From the log, you can drill into the details about a specific email
+
+![Screenshot of email details](/media/v15/transactional-history.png)
+
+You can even see the content of the individual email and resend it if needed.
+
+![Screenshot of email details](/media/v15/transactional-view.png)
+
 
 ## Hooking it up
 Start by creating a model that defines the email you want to send.
