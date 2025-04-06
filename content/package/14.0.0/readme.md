@@ -3,12 +3,9 @@ title: 14.0.0 Overview
 description: Here we'll outline things you need to know to work with Newsletter Studio
 ---
 
-
 # Overview
 
 Newsletter Studio 14 for Umbraco 14
-
-**NOTE!** The documentation for Newsletter Studio v14 is still work in progress.
 
 Here we'll outline some of the important basics about Newsletter Studio. Use this as a starting point before reading details about specific features in the package.
 

@@ -8,8 +8,6 @@ description: Here we'll outline things you need to know to work with Newsletter 
 
 Newsletter Studio 15 for Umbraco 15
 
-**NOTE!** The documentation for Newsletter Studio v15 is still work in progress.
-
 Here we'll outline some of the important basics about Newsletter Studio. Use this as a starting point before reading details about specific features in the package.
 
 # Versions

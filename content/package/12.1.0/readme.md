@@ -8,6 +8,10 @@ description: Here we'll outline things you need to know to work with Newsletter 
 
 Newsletter Studio 12.1 for Umbraco 12
 
+{% hint style="warning" %}
+This version of Newsletter Studio is end-of-life and not officially supported.
+{% endhint %}
+
 Here we'll outline some of the important basics about Newsletter Studio. Use this as a starting point before reading details about specific features in the package.
 
 * v12.1 is the first feature-release for Umbraco 12, adding support for [running on Linux](other/linux-and-mac.md)

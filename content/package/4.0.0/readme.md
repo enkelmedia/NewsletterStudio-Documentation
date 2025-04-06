@@ -8,6 +8,10 @@ description: Here we'll outline things you need to know to work with Newsletter 
 
 Newsletter Studio 4 for Umbraco 9
 
+{% hint style="warning" %}
+This version of Newsletter Studio is end-of-life and not officially supported.
+{% endhint %}
+
 Here we'll outline some of the important basics about Newsletter Studio. Use this as a starting point before reading details about specific features in the package.
 
 # Versions
