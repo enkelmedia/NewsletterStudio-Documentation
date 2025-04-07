@@ -5,7 +5,7 @@ description: How to configure Newsletter Studio for Umbraco
 # Configuration
 ## Different types of configuration
 
-Most settings are tied to a [Workspace](../concepts/workspaces.md) and some configuration/settings is only available for administrators, that are settings like permissions, custom fields, site url, email delivery, and so on. Other settings like default senders, Google Analytics, and unsubscribe settings can be made available for editors as well.
+Most settings are tied to a [Workspace](../concepts/workspaces.md) and some configuration/settings are only available for administrators, that are settings like permissions, custom fields, site url, email delivery, and so on. Other settings like default senders, Google Analytics, and unsubscribe settings can be made available for editors as well.
 
 ## Administrator Configuration
 
