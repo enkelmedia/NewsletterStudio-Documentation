@@ -5,7 +5,7 @@ description: Information about running Newsletter Studio on Linux
 # Running on Linux and Mac
 To embrace the cross platform nature of Umbraco and modern .NET, Newsletter Studio fully supports running on Linux and Mac. 
 
-![Running on Linux](../../../../media/other-running-on-linux.png)
+![Running on Linux](/media/other-running-on-linux.png)
 
 ## Before you start
 
