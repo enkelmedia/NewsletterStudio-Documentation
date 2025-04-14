@@ -3,9 +3,9 @@ title: Notifications / Events
 description: Documentation about Events inside Newsletter Studio
 ---
 # Notifications / Events
-Newsletter Studio uses the build in Notification mechanism in Umbraco to fire notification events. 
+Newsletter Studio uses the built in Notification mechanism in Umbraco to fire notification events. 
 
-Here's a simple example of a notification handler that kicks in just be for a [Email Service Provider](./email-service-providers.md) sends a email.
+Here's a simple example of a notification handler that kicks in just be for a [Email Service Provider](../develop/email-service-providers.md) sends a email.
 ```csharp
 public class EmailSendingHandler : INotificationHandler<EmailSendingNotification>
 {
