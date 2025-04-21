@@ -142,3 +142,9 @@ If you still want to use a custom font, this is how to configure the dropdown to
     }
 }
 ```
+
+{% hint style="warning" %}
+**Consider CORS**
+
+If server hosting the fonts is using CORS settings to restrict public access to certain assets, you might need to ensure that any custom fonts are excluded from these CORS settings. Ensure to test this thoroughly before sending live emails.
+{% endhint %}
