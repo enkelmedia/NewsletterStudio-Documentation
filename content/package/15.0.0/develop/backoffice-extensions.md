@@ -16,6 +16,14 @@ Newsletter Studio comes with a couple of extension points for the backoffice, he
 * `nsAction` - used to inject actions (like remove, duplicate, export etc) for different entities like nsRecipient, nsMailingList etc.
 * `nsEmailServiceProviderSettingsUi` - optionally used when building a custom [Email Service Provider](../develop/email-service-providers.md).
 
+## NPM Package
+
+We also ship a [NPM-package](https://www.npmjs.com/package/@newsletterstudio/umbraco) with the TypeScript-types needed to create extensions for Newsletter Studio, you can install it like this: 
+
+```bash
+npm i -D @newsletterstudio/umbraco
+```
+
 ## Helpful components
 We ship a couple of helpful components that can be used for debugging issues during the development of a extension.
 
