@@ -56,6 +56,12 @@
       link: /develop/sending-campaigns-programmatically/
     - title: Database tables
       link: /develop/database-tables/      
+- title: Extensions
+  items:
+    - title: Umbraco Forms
+      link: /extensions/umbraco-forms/
+    - title: Mailjet
+      link: /extensions/mailjet/    
 - title: Other
   items:
     - title: Sending from the content section
