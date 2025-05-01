@@ -1,5 +1,5 @@
 # Send using Mailjet
-A [email service provider](../develop/email-service-providers.md)-implementation that used the [Mailjet](https://www.mailjet.com/) API to send emails in bulk.
+integrates Mailjet using a [email service provider](../develop/email-service-providers.md) that uses the [Mailjet](https://www.mailjet.com/) API to send emails. The integration also supports updating errors and bounces based on Webhooks from Mailjet.
 
 ## Getting started
 Start by adding the extension to your Umbraco project by installing it from [NuGet](https://www.nuget.org/packages/NewsletterStudio.Plugins.Mailjet)
