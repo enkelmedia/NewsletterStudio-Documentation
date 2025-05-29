@@ -22,48 +22,29 @@ The Email Service Provider needs to be configured in the Administration-section 
 ## Custom Email Service Provider
 Use some of the open source providers above as inspiration. Here is a simple example of a "empty" provider:
 
-```csharp
-public class CoolEmailCompanyEmailServiceProvider : IEmailServiceProvider
-{
-    public string Alias => "coolEmail";
-    public string DisplayName => "Cool Email";
-    public string SettingsView => "~/App_Plugins/coolEmail/settings.html";
-    public Dictionary<string, object> Settings { get; set; }
-    
-    public SendOutConfiguration GetSendOutConfiguration()
-    {
-        throw new NotImplementedException();
-    }
+{% contrib file="V15/Extensions-Demos/Demo.Web/Extensions/EmailServiceProvider/CoolCompanyEmailServiceProvider.cs" %}
+{% endcontrib %}
 
-    public ValidationErrorCollection ValidateSettings(Dictionary<string, object> settings)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void Send(List<SendEmailJob> batch)
-    {
-        throw new NotImplementedException();
-    }
-
-    public CommandResult Send(MailMessage message)
-    {
-        throw new NotImplementedException();
-    }
-}
-```
 
 Adding the Email Service Provider to our list of services, in your startup code:
 
+{% contrib file="V15/Extensions-Demos/Demo.Web/Extensions/EmailServiceProvider/CoolCompanyComposer.cs" %}
+{% endcontrib %}
 
-```csharp
-public class MySiteComposer : IComposer {
-    public void Compose(IUmbracoBuilder builder)
-    {
-        builder.NewsletterStudio().EmailServiceProviders.Append<CoolEmailCompanyEmailServiceProvider>();
-    }
-}
-```
 
 Then, in the Workspace administration, the new provider should show up here:
 
 ![Configure custom provider](/media/administration--allow-email-service-provider.png)
+
+## Adding UI for configuration
+You can also provide an extension for the backoffice to mount a element for settings related to the provider.
+
+First, create a element to render
+
+{% contrib file="V15/Extensions-Demos/Demo.Web/Client/src/email-service-provider/cool-email-email-service-provider-settings.element.ts" %}
+{% endcontrib %}
+
+Then register the element as a `nsEmailServiceProviderSettingsUi` extension.
+
+{% contrib file="V15/Extensions-Demos/Demo.Web/Client/src/email-service-provider/manifest.ts" %}
+{% endcontrib %}
