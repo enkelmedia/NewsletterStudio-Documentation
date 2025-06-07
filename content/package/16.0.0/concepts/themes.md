@@ -123,6 +123,23 @@ Create the file:
 
 This view will now be used for all email rendering when "My Theme" is used.
 
+## Themes and Razor Class Libraries
+Since version 16, Newsletter Studio support reading themes from inside a Razor Class Library (RCL). To align with the way that the Umbraco core reads RCL content you need to put all your extension files inside the `wwwroot`-folder.
+
+Here is a example of the structure inside a Razor Class Library:
+
+```sh
+├── wwwroot
+│   └── App_Plugins
+│       └── newsletterStudio
+│           └── themes
+│               └── myTheme
+│                   ├── views
+│                   │   └── controls
+│                   │       └── button.cshtml
+│                   └── theme.json
+```
+
 ## Custom Fonts
 It's possible to manipulate the list of fonts that we show in the drop downs and use in your emails. Be aware that while it's possible to render the needed CSS for a custom font not all email client will support them. One example is Microsoft Outlook that does not support custom fonts and it will not respect any fallback fonts. For example when setting the style `font-family: CustomFont, Arial;` Outlook will ignore the CustomFont but it will not fallback to Arial but to the default font configured in Outlook.
 
