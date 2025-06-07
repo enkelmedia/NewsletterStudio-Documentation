@@ -13,6 +13,7 @@ Here we'll outline some of the important basics about Newsletter Studio. Use thi
 # Versions
 If you're looking for documentation for a specific version of the package, these links might be useful.
 
+* [Newsletter Studio 16 for Umbraco 16](../package/16.0.0/)
 * [Newsletter Studio 15 for Umbraco 15](../package/15.0.0/)
 * [Newsletter Studio 14 for Umbraco 14](../package/14.0.0/)
 * [Newsletter Studio 13 for Umbraco 13](../package/13.0.0/)
