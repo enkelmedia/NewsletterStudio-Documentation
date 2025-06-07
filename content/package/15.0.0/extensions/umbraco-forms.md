@@ -20,7 +20,7 @@ When this is configured, you can create **a new transactional email**. In the fi
 
 ![Fields from selected form](/media/extensions/umbraco-forms/editor-merge-field-all-fields.png)
 
-When your are ready with the email design, to over to the Forms-section and go to the edit-view for your form. Scroll down to "Edit Workflows" and add the "Send Transactional Email"-workflow. Configure the settings and pick your newly created template.
+When your are ready with the email design, navigate to the Forms-section and open the edit-view for your form. Scroll down to "Edit Workflows" and add the "Send Transactional Email"-workflow. Configure the settings and pick your newly created template.
 
 ![Pick transactional template](/media/extensions/umbraco-forms/workflow-send-pick-template.png)
 
