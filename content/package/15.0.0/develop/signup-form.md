@@ -7,7 +7,7 @@ During the first boot after installing the package we will copy a partial view c
 
 This view can be used as a starting point for a simple signup form, you could use it in a block or render it directly on a page using something like this:
 
-```
+```html
 <partial name="NewsletterStudioSignup" />
 ```
 

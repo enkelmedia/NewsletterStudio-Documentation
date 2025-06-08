@@ -9,12 +9,13 @@ The old AngularJS-implementation was thrown away and a new, modern, implementati
 
 You can also use our [NewsletterStudioContrib](https://github.com/enkelmedia/NewsletterStudioContrib)-project as a starting point - it has all the setup you need.
 
-Newsletter Studio comes with a couple of extension points for the backoffice, here are a overview of the extension type aliases we support
+Newsletter Studio comes with a couple of extension points for the backoffice, here are a overview of the extension type aliases we support:
 
 * `nsEmailControlEditUi` used when creating a [email control](../develop/email-control.md).
 * `nsEmailControlDisplayUi` used when creating a [email control](../develop/email-control.md).
-* `nsAction` - used to inject actions (like remove, duplicate, export etc) for different entities like nsRecipient, nsMailingList etc.
-* `nsEmailServiceProviderSettingsUi` - optionally used when building a custom [Email Service Provider](../develop/email-service-providers.md).
+* `nsAction` used to inject actions (like remove, duplicate, export etc) for different entities like nsRecipient, nsMailingList etc.
+* `nsEmailServiceProviderSettingsUi` optionally used when building a custom [Email Service Provider](../develop/email-service-providers.md).
+* `nsTiptapConfiguration` used to customize or replace the configuration for the Tiptap Rich Text Editor in the [Email Editor](../concepts/email-editor.md).
 
 ## NPM Package
 
