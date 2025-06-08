@@ -21,7 +21,7 @@ The package ships with a simple demo-view that shows how to add a recipient to a
 
 This showcases a simple way to add a recipient from the front end of your site, if you need to do this in your own controller, here is an example:
 
-{% contrib file="V15/Extensions-Demos/Demo.Web/Features/AddRecipient/AddRecipientController.cs" %}
+{% contrib file="V16/Extensions-Demos/Demo.Web/Features/AddRecipient/AddRecipientController.cs" %}
 {% endcontrib %}
 
 The AddRecipientRequest-class contains a fluent API to set data for the operation, here are some of the methods:

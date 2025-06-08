@@ -21,17 +21,17 @@ A working Umbraco-website with this provider can be found in our [contrib-projec
 
 Most of the types and methods have XML-comments and documentation - use your IDE and hover types/methods to read more information.
 
-{% contrib file="V15/Extensions-Demos/Demo.Web/Extensions/RecipientListProvider/InMemoryRecipientListProvider.cs" %}
+{% contrib file="V16/Extensions-Demos/Demo.Web/Extensions/RecipientListProvider/InMemoryRecipientListProvider.cs" %}
 {% endcontrib %}
 
 This sample uses a small POCO that looks like this:
 
-{% contrib file="V15/Extensions-Demos/Demo.Web/Extensions/RecipientListProvider/InMemoryRecipient.cs" %}
+{% contrib file="V16/Extensions-Demos/Demo.Web/Extensions/RecipientListProvider/InMemoryRecipient.cs" %}
 {% endcontrib %}
 
 We also need to register the provider during startup:
 
-{% contrib file="V15/Extensions-Demos/Demo.Web/Extensions/RecipientListProvider/InMemoryRecipientListProviderComposer.cs" %}
+{% contrib file="V16/Extensions-Demos/Demo.Web/Extensions/RecipientListProvider/InMemoryRecipientListProviderComposer.cs" %}
 {% endcontrib %}
 
 After this we need to run the website, and go to Administration -> Workspace to allow our new custom provider for Campaigns:

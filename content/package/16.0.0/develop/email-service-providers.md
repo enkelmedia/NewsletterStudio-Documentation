@@ -22,13 +22,13 @@ The Email Service Provider needs to be configured in the Administration-section 
 ## Custom Email Service Provider
 Use some of the open source providers above as inspiration. Here is a simple example of a "empty" provider:
 
-{% contrib file="V15/Extensions-Demos/Demo.Web/Extensions/EmailServiceProvider/CoolCompanyEmailServiceProvider.cs" %}
+{% contrib file="V16/Extensions-Demos/Demo.Web/Extensions/EmailServiceProvider/CoolCompanyEmailServiceProvider.cs" %}
 {% endcontrib %}
 
 
 Adding the Email Service Provider to our list of services, in your startup code:
 
-{% contrib file="V15/Extensions-Demos/Demo.Web/Extensions/EmailServiceProvider/CoolCompanyComposer.cs" %}
+{% contrib file="V16/Extensions-Demos/Demo.Web/Extensions/EmailServiceProvider/CoolCompanyComposer.cs" %}
 {% endcontrib %}
 
 
@@ -41,10 +41,10 @@ You can also provide an extension for the backoffice to mount a element for sett
 
 First, create a element to render
 
-{% contrib file="V15/Extensions-Demos/Demo.Web/Client/src/email-service-provider/cool-email-email-service-provider-settings.element.ts" %}
+{% contrib file="V16/Extensions-Demos/Demo.Web/Client/src/email-service-provider/cool-email-email-service-provider-settings.element.ts" %}
 {% endcontrib %}
 
 Then register the element as a `nsEmailServiceProviderSettingsUi` extension.
 
-{% contrib file="V15/Extensions-Demos/Demo.Web/Client/src/email-service-provider/manifest.ts" %}
+{% contrib file="V16/Extensions-Demos/Demo.Web/Client/src/email-service-provider/manifest.ts" %}
 {% endcontrib %}
