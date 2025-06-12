@@ -17,34 +17,13 @@ Newsletter Studio uses Render Tasks to:
 Developers can create render tasks and register them during startup. Just implement `IRenderTask`, we will call the `Process()` method once for each recipient. Be aware that any heavy work inside a Render Task will slow down the rendering and send-out process.
 
 
-```csharp
-public class AddAttachmentRenderTasks : IRenderTask
-{
-    public void Process(RenderTaskProcessingResult result, RenderTaskParameters parameters)
-    {
-        parameters.MailMessage.Attachments.Add(GetAttachmentFor(parameters.Recipient));
-    }
-
-    private Attachment GetAttachmentFor(IRecipientDataModel recipientDataModel)
-    {
-        using (var stream = File.OpenRead("c:\\temp\\invoice.pdf"))
-        {
-            return new Attachment(stream,"Invoice123.pdf");
-        }
-    }
-}
-```
+{% contrib file="V16/Extensions-Demos/Demo.Web/Extensions/RenderTask/AddAttachmentRenderTask.cs" %}
+{% endcontrib %}
 
 We also need to register the Render Task during application startup
 
-```csharp
-public class MySiteComposer : IComposer {
-    public void Compose(IUmbracoBuilder builder)
-    {
-        builder.NewsletterStudio().RenderTasks.Append<AddAttachmentRenderTasks>();
-    }
-}
-```
+{% contrib file="V16/Extensions-Demos/Demo.Web/Extensions/RenderTask/MySiteComposer.cs" %}
+{% endcontrib %}
 
 ## Remove Core tasks
 It's also possible to remove/replace the core Render Tasks. Here is an example of how to inactivate all the tracking:
