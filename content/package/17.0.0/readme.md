@@ -1,12 +1,11 @@
 ---
-title: 16.0.0 Overview
+title: 17.0.0 Overview
 description: Here we'll outline things you need to know to work with Newsletter Studio
 ---
 
-
 # Overview
 
-Newsletter Studio 16 for Umbraco 16
+Newsletter Studio 17 for Umbraco 17
 
 Here we'll outline some of the important basics about Newsletter Studio. Use this as a starting point before reading details about specific features in the package.
 

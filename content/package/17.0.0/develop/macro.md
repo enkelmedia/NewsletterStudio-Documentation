@@ -79,7 +79,7 @@ Views inside a macro supports injecting dependencies using `@inject`, just like 
 
 
 ## Publish a site with Macros
-When you run your Umbraco site in [Production Mode](https://docs.umbraco.com/umbraco-cms/fundamentals/setup/server-setup/runtime-modes#production-mode), any used by the application must be compiled. Views inside the `App_Plugins`-folder are not compiled by default. Add this to your `.csproj` to ensure that the `.cshtml` files are compiled:
+When you run your Umbraco site in [Production Mode](https://docs.umbraco.com/umbraco-cms/fundamentals/setup/server-setup/runtime-modes#production-mode), views used by the application must be compiled. Views inside the `App_Plugins`-folder are not compiled by default. Add this to your `.csproj` to ensure that the `.cshtml` files are compiled:
 
 ```xml
 <ItemGroup>    
