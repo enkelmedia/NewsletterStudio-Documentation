@@ -1,5 +1,5 @@
 name: Newsletter Studio
-current_version: 16.0.0
+current_version: 17.0.0
 version_groups:  
   - name: Umbraco 17
     versions:
