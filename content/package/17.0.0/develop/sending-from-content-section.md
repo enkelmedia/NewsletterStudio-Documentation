@@ -49,3 +49,5 @@ With this setup Newsletter Studio will use the `ArticleNewsletter`-template to r
 ## Permissions
  Note that editors need to have the "Send from Content"-permissions for the Workspace, as an administrator you’ll always have access to all Workspaces/Features. This can be configured in `Administration -> (Your Workspace) -> Permissions`. If there are no permissions configured everyone can access everything.
 
+## How content is updated
+The package fetches the content from the rendered Umbraco document every time the campaign is saved. If you want to refresh the content of a campaign, press the save button.
