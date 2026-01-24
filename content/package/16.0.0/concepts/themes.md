@@ -123,14 +123,18 @@ Create the file:
 
 This view will now be used for all email rendering when "My Theme" is used.
 
-## Themes and Production Mode
-When you run your Umbraco site in [Production Mode](https://docs.umbraco.com/umbraco-cms/fundamentals/setup/server-setup/runtime-modes#production-mode), views used by the application must be compiled. Views inside the `App_Plugins`-folder are not compiled by default. Add this to your `.csproj` to ensure that the `.cshtml` files are compiled:
+## Compiled Views
+ASP.NET core is evolving and moving away from [runtime compilation](https://learn.microsoft.com/en-us/dotnet/core/compatibility/aspnet-core/10/razor-runtime-compilation-obsolete) in favour of hot reload. This means that you need to ensure that your views are compiled with your project.
+
+If you are having issues seeing the your `.cshtml` files, ensure that they are included in the `.csproj`-project, for example like this:
 
 ```xml
 <ItemGroup>    
   <RazorGenerate Include="App_Plugins\**\*.cshtml" />
 </ItemGroup>  
 ```
+
+While it's still possible to get runtime compilation to work during development, when you run your Umbraco site in [Production Mode](https://docs.umbraco.com/umbraco-cms/fundamentals/setup/server-setup/runtime-modes#production-mode), views used by the application must be compiled. Views inside the `App_Plugins`-folder are not compiled by default. Make sure to add the configuration above to your `.csproj` file to solve this issue.
 
 ## Themes and Razor Class Libraries
 Since version 16, Newsletter Studio support reading themes from inside a Razor Class Library (RCL). To align with the way that the Umbraco core reads RCL content you need to put all your extension files inside the `wwwroot`-folder.
