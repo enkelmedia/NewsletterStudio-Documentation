@@ -11,3 +11,15 @@ This is useful for installations that host multiple websites where each website 
 Is easy to set up permissions for a Workspace based on backoffice User Groups or a User level.
 
 Only Umbraco users in the Administrator role can create/edit Workspaces.
+
+## Workspace Key
+The workspace key is a unique identifier for a workspace, this key is used by the license to verify your workspace. 
+
+To find your workspace key, go to `Administration` and click on your workspace.
+
+![Workspace settings](/media/workspaces-administration-list.png)
+
+Then look for your **workspace key** in the top right corner.
+
+![Workspace settings](/media/workspaces-workspace-key.png)
+ 
