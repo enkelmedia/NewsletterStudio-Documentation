@@ -6,7 +6,7 @@ description: Configure Newsletter Studio to send using SMTP and read bounces usi
 The default option in Newsletter Studio is to send emails using the SMTP protocol. Most email service providers like SendInBlue, Mailgun,Mailjet, Amazon SES support this protocol.
 
 ## Rate Limits
-Be aware that some SMTP replay services apply rate limits for how fast you are allowed to send via their service. If your provides enforces restrictions you can use our rate limit feature when you configure the SMTP to repect the rates of your provider.
+Be aware that some SMTP replay services apply rate limits for how fast you are allowed to send via their service. If your provides enforces restrictions you can use our rate limit feature when you configure the SMTP to respect the rates of your provider.
 
 
 ## Bounce management
