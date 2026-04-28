@@ -8,6 +8,63 @@ The default option in Newsletter Studio is to send emails using the SMTP protoco
 ## Rate Limits
 Be aware that some SMTP replay services apply rate limits for how fast you are allowed to send via their service. If your provides enforces restrictions you can use our rate limit feature when you configure the SMTP to respect the rates of your provider.
 
+![Configure rate limits for SMTP](/media/administration-smtp-rate-limiting.png)
+
+### Batches and workers
+When a campaign is sent, a coordinator will create a queue and spinn up a number of workers to process the queue. The workers will process the queue by claiming a batch of emails for delivery, perform the delivery using a [Email Service Provider](./email-service-providers.md) and report back to the coordinator.
+
+![Illustration, coordinator and workers](/media/sending-and-workers.drawio.svg)
+
+The package ships with configuration defaults that keeps a balance between speed, server/database load, checkpointing and the most common rate limit restrictions with SMTP Providers. 
+
+The default batch size is intentionally small to allow frequent checkpointing. This ensures that progress is persisted regularly and limits how much work needs to be retried if an unhandled exception occurs. 
+
+If you need to send faster you can adjust these settings to raise the throughput, the trade ofs include load and checkpointing depending on your settings.
+ 
+There are two "layers" of configuration:
+
+#### Email Provider Settings
+These settings are configured by the [Email Service Provider](./email-service-providers.md) depending on the supported batch sizes. Email Service Providers allow configuration of:
+
+* **Max Items Per Batch** The number of items to claim from the queue for each cycle. A cycle might consist of several sending batches. (default: 10)
+* **Send Batch Size** The number of items to send in each batch, after a batch has been sent the result is persisted to the database. (default for SMTP: 5)
+
+For example, a provider that sends using a REST API might support sending 25 emails in a single call to the API-service. It might claim 100 items from the queue (`Max Item Per Batch`) and then send them them in 4 calls to the service (`Send Batch Size`).
+
+Another scenario is SMTP, we might want to claim 10 items from the queue (`Max Items Per Batch`) and ensure that we persist the state after each delivery by setting `Send Batch Size` to 1. 
+
+Configuration could be internal to the concrete Email Service Provider-implementation but some of them expose settings that you can configure, OR you could implement your own from scratch or by inheriting from an existing provider.
+
+#### Worker Manager Configuration (Coordinator)
+The worker manager configuration apply on a higher level will allow you to override batch settings from Email Service Providers.
+
+The configuration includes:
+* **Level of parallelism** the number of worker "threads" that the coordinator should spinn up (default: 5).
+* **Batch Size** the maximum batch size for a cycle. The lowest between this and the `MaxItemsPerBatch` on the Email Service Provider is used. This settings can be used to limit the load if the Email Service Provider has a very high batch size and your infrastructure is under heavy load during sending. (default: 10)
+
+
+#### Override defaults
+You can use `appsetting.json` to override the default values
+
+```
+{
+    "NewsletterStudio" : {
+        "Delivery: {
+            "Workers": 10,
+            "CycleBatchSize": 20,
+            "SendBatchSize": 10
+        }
+    }
+}
+```
+
+* `Delivery.Workers`, the number of worker "threads" to start.
+* `Delivery.CycleBatchSize`, the number of items to claim from the queue in each cycle.
+* `Delivery.SendBatchSize`, applies to default SMTP-implementation. The number of emails to send before persisting the result to the database.
+
+You are encouraged to test settings and measure the results in your specific environment, a couple of things to keep in mind:
+* Bigger batches will be faster but if a failure occurs, emails in the failed batched might be sent again. Keeping the batch size smaller will avoid re-sending to the same recipient if something goes wrong.
+* More workers does not guarantee higher throughput, database and email rendering might still be bottle necks.
 
 ## Bounce management
 If you want to handle bounces for your emails you can provide a mailbox where the package can look for these bounce emails. The package will check periodically and update the state of the recipients and any tracking information if it detects a bounce.
