@@ -46,7 +46,7 @@ The configuration includes:
 #### Override defaults
 You can use `appsetting.json` to override the default values
 
-```
+```json
 {
     "NewsletterStudio" : {
         "Delivery: {

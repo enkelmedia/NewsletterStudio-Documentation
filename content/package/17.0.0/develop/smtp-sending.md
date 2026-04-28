@@ -51,13 +51,13 @@ The configuration includes:
 #### Override defaults
 You can use `appsetting.json` to override the default values
 
-```
+```json
 {
     "NewsletterStudio" : {
         "Delivery: {
-            "Workers" : 10,
-            "CycleBatchSize" : 20,
-            "SendBatchSize" : 10
+            "Workers": 10,
+            "CycleBatchSize": 20,
+            "SendBatchSize": 10
         }
     }
 }
