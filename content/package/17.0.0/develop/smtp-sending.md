@@ -63,8 +63,8 @@ You can use `appsetting.json` to override the default values
 }
 ```
 
-* `Delivery.Workers`, the number of worker "threads" to start.
-* `Delivery.CycleBatchSize`, the number of items to claim from the queue in each cycle.
+* `Delivery.Workers`, the number of workers to use while progressing the queue.
+* `Delivery.CycleBatchSize`, the number of items to claim from the queue in each cycle. Sets the max batch size for both workers and SMTP-implementation.
 * `Delivery.SendBatchSize`, applies to default SMTP-implementation. The number of emails to send before persisting the result to the database.
 
 You are encouraged to test settings and measure the results in your specific environment, a couple of things to keep in mind:
