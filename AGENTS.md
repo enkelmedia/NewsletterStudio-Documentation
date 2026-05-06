@@ -35,6 +35,7 @@ Documentation is versioned under `content/package/<version>/`. The current versi
 - Do not rename or move media files unless the documentation references are updated at the same time.
 - Be aware that the documentation contains older versions that are no longer supported.
 - When asked to apply changes to older versions, only apply changes to the currently supported versions. This page https://www.newsletterstudio.org/installation/ will list currently supported versions.
+- Links to other files should start with `../` even if the file is located in the same folder.
 
 ## Proofreading Guidelines
 
