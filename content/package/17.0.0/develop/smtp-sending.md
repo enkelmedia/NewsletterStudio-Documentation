@@ -74,7 +74,7 @@ You can use [`appsettings.json`](../getting-started/configuration.md) to overrid
 You are encouraged to test settings and measure the results in your specific environment, a couple of things to keep in mind:
 * Bigger batches will be faster but if a failure occurs, emails in the failed batch might be sent again. Keeping the batch size smaller will avoid re-sending to the same recipient if something goes wrong.
 * More workers does not guarantee higher throughput, database and email rendering might still be bottlenecks.
-* Watch for delivery failures, SMTP throttling errors, database load, rendering time and duplicated sends when testing new settings. The [debugging guide](./debugging.md) explains how to inspect Newsletter Studio log output.
+* Watch for delivery failures, SMTP throttling errors, database load, rendering time and duplicated sends when testing new settings. The [debugging guide](../develop/debugging.md) explains how to inspect Newsletter Studio log output.
 
 ## Bounce management
 If you want to handle bounces for your emails you can provide a mailbox where the package can look for these bounce emails. The package will check periodically and update the state of the [recipients](../concepts/recipients.md) and any tracking information if it detects a bounce.
